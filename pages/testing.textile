@@ -1,5 +1,5 @@
 
-h1. Проверка меню
+h3. Тестовая страница
 
 "index":/index | "link 1":/link1 | "link 2":/link2 | "link 3":/link3 | "link 4":/link4 | "link 5":/link5 | "Arduino":/arduino
 
@@ -7,83 +7,49 @@ h1. Проверка меню
 
 p(#i2). Проверка ссылки
 
+bq. zz
 
-!/images/esp01_am2321.jpg!
+<pre> well </pre>
 
-!/images/esp01_bh1750.jpg!
+* "ok":/yes
+* OkOk
 
-!/images/esp01_bmp180.jpg!
+---
+
+
+h3. Работа с изображениями
 
 !/images/esp01_dht22.jpg!
 
+---
+
 !/images/esp01_ds18b20.jpg!
 
-!/images/esp01_lm75.jpg!
+---
 
 !/images/esp01_oled.jpg!
 
 ---
 
-* "ok":/yes
-* OkOk
-
-
 !/images/esp01_infrared.jpg!
 
 ---
 
+
 h3. Характеристики
 
-* <i class="fa fa-leaf"></i> Модель на схеме: TRU-3VDC-SB-CL
+* Модель на схеме: TRU-3VDC-SB-CL
 * Напряжение питания: 2.25V - 3.9V
 * Ток потребления: >0.36W
 * Интерфейс подключения: Аналоговый
 
 !/images/esp01_relay.jpg!
 
-bq. zz
-
-<pre> well </pre>
-
----
 
 
-
-
-h3. Введение
-
-p. В связи с плановой заменой SSL сертификата на сервисе "FlyPay":http://flypay.cc была произведена настройка сервера Nginx и получен класс A+ по безопасности.
-
-|_=. Версия OpenWrt                                                                      |_=. Ядро   |_=. ADM5120 |_=. AR71xx |_=. BRCM63xx |_=. RAMIPS |_=. x86  |
-|=. "Attitude Adjustment 12.09":https://downloads.openwrt.org/attitude_adjustment/12.09/ |=. 3.3.8   |=. *        |=. *       |=. *         |=. ---     |=. *     |
-|=. "Barrier Breaker 14.07":https://downloads.openwrt.org/barrier_breaker/14.07/         |=. 3.10.49 |=. ---      |=. *       |=. *         |=. *       |=. *     |
-|=. "Chaos Calmer 15.05":https://downloads.openwrt.org/chaos_calmer/15.05-rc1/           |=. 3.18.11 |=. *        |=. *       |=. *         |=. *       |=. *     |
-|                                                                                        |           |            |           |             |           |         |
-
-
-h3. Test
-
-* Роутеры
-  * ADM5120
-    * BRCM5354
-    * BRCM6345
-    * BRCM6348
+h3. Другое
 
 |_=. Дата    |_=. Баланс  |_=. Дебет  |_=. Кредит  |_=. Маржа  |
 |=.  0610    |=.  41091   |=.  11405  |=.  -21876  |=.  ?      |
 
-<!-- iframe width="600" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-src="https://maps.google.com/maps/ms?msid=216825958628311901687.0004db48028ed03c4f8e8&amp;msa=0&amp;ie=UTF8&amp;ll=44.953623,34.213486&amp;spn=0.262399,0.617294&amp;t=h&amp;output=embed">
-</iframe -->
-
 <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Vw9sxpFwT5XcyGh-1rRZ99sj83cwvk0F&width=600&height=450"></script>
-
-
-h3. Usage
-
-bc. console.log( textile( "I am using __textile__." ) );
-
-You can also get to the syntax tree, which uses "JsonML":http://www.jsonml.org/.
-
-bc. var jsonml = textile.parse( text );
-console.log( jsonml );

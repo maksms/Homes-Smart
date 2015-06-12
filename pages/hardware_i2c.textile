@@ -5,9 +5,6 @@ h3. AM2321 - датчик температуры и влажности
 * Напряжение питания:
 * Ток потребления:
 
-bc. var jsonml = textile.parse( text );
-console.log( jsonml );
-
 p<. !/images/esp01_am2321.jpg!
 
 bc. Примечания:
