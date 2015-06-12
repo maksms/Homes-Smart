@@ -1,15 +1,13 @@
 
 h3. Тестовая страница
 
-"index":/index | "link 1":/link1 | "link 2":/link2 | "link 3":/link3 | "link 4":/link4 | "link 5":/link5 | "Arduino":/arduino
-
 "i2":#i2
 
 p(#i2). Проверка ссылки
 
-bq. zz
+bq. "bq."
 
-<pre> well </pre>
+pre. "pre."
 
 * "ok":/yes
 * OkOk
