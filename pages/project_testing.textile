@@ -25,10 +25,6 @@ p. !/images/esp01_oled.jpg!
 
 ---
 
-p. !/images/esp01_infrared.jpg!
-
----
-
 
 
 h3. Характеристики
