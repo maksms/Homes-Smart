@@ -1,0 +1,22 @@
+
+h3. Официальные ссылки
+
+---
+
+* "Беспроводной датчик на базе ESP8266 с отправкой данных на удаленные сервера":http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/62-besprovodnoj-datchik-na-baze-esp8266-dlya-servisa-narodmon-ru
+* "Сверхдешевый WI-FI модуль ESP8266":http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/sverkhdeshevyj-wi-fi-modul-esp8266
+* "Конструктор прошивок для ESP8266 и личный кабинет активаций":http://esp8266.homes-smart.ru/
+
+* "Форум: Бета тест версии прошивки ESP8266 0.1.1":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/843-beta-test-versii-proshivki-esp8266-0-1-1
+* "Форум: Прием сигналов 433/315мгц на ESP8266":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/844-priem-signalov-433-315mgts-na-esp8266
+* "Форум: Заявки на добавление опций в конструктор прошивки ESP8266":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/845-zayavki-na-dobavlenie-optsij-v-konstruktor-proshivki-esp8266
+* "Форум: Проблемы прошивки ESP8266 и их решения":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/861-problemymy-proshivkt-esp8266-i-ikh-resheniya
+* "Форум: Обновление прошивки через интернет. Проблемы и вопросы":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/862-obnovlenie-proshivki-cherez-internet-problemy-i-voprosy
+* "Форум: Выключатель на основе esp8266":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/860-vyklyuchatel-na-osnove-esp8266
+* "Форум: Приложение под Android для управления ESP8266":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/856-prilozhenie-pod-android-dlya-upravleniya-esp-8266
+* "Форум: Обсуждение багов беспроводного датчика на базе ESP8266":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/824-obsuzhdenie-bagov-besprovodnogo-datchika-na-baze-esp8266
+* "Форум: Кто чем питает свой ESP8266 ?":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/853-kto-chem-pitaet-svoj-esp8266
+* "Форум: Управление ЛЮБЫМИ I2C устройствами с помощью ESP8266":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/828-upravlenie-lyubymi-i2c-ustrojstvami-s-pomoshchyu-esp8266
+* "Форум: Новая версия прошивки esp8266 0.1.0 с режимом PRO":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/829-novaya-versiya-proshivki-esp8266-0-1-0-s-rezhimom-pro-reliz
+* "Форум: Обсуждение беспроводного датчика на базе ESP8266":http://www.homes-smart.ru/index.php/component/kunena/4-zhelezo/188-obsuzhdenie-besprovodnogo-datchika-na-baze-esp8266
+* "Форум: ESPmeteo - устройство сбора метеоданных":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/837-espmeteo-ustrojstvo-sbora-meteodannykh?limitstart=0
