@@ -1,3 +1,1 @@
-# Homes-Smart
-
-Homes-Smart on ESP8266
+# Homes-Smart on ESP8266

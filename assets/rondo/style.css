@@ -1,0 +1,162 @@
+/*
+Template: Meilleur
+Author: EGrappler.com using Bootstrap 3
+*/
+
+/* USE FROM HERE */
+
+@font-face {
+	font-family: 'rondo';
+	src:  	url('rondod41d.eot?#') format('eot'),
+		 	url('rondo.svg#rondo') format('svg'),
+		 	url('rondo.woff') format('woff'),
+		 	url('rondo.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'rondo';
+	content: attr(data-icon);
+	speak: none;
+	/* Enable Ligatures */
+	-webkit-font-feature-settings:"liga","dlig";-moz-font-feature-settings:"liga=1, dlig=1";-moz-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";
+	font-feature-settings:"liga","dlig";
+	text-rendering:optimizeLegibility;
+	}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="social-icon-"]:before, [class*=" social-icon-"]:before {
+	font-family: 'rondo';
+	font-style: normal;
+	speak: none;
+	/* Enable Ligatures */
+	-webkit-font-feature-settings:"liga","dlig";-moz-font-feature-settings:"liga=1, dlig=1";-moz-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";
+	font-feature-settings:"liga","dlig";
+	text-rendering:optimizeLegibility;
+	}
+
+/* Icons */
+
+.social-icon-youtube:before {
+	content: "\79\6f\75\74\75\62\65";
+}
+.social-icon-yahoo:before {
+	content: "\79\61\68\6f\6f";
+}
+.social-icon-xing:before {
+	content: "\78\69\6e\67";
+}
+.social-icon-wordpress:before {
+	content: "\77\6f\72\64\70\72\65\73\73";
+}
+.social-icon-windows:before {
+	content: "\77\69\6e\64\6f\77\73";
+}
+.social-icon-vimeo:before {
+	content: "\76\69\6d\65\6f";
+}
+.social-icon-twitter:before {
+	content: "\74\77\69\74\74\65\72";
+}
+.social-icon-tumblr:before {
+	content: "\74\75\6d\62\6c\72";
+}
+.social-icon-stumbleupon:before {
+	content: "\73\74\75\6d\62\6c\65\75\70\6f\6e";
+}
+.social-icon-stackoverflow:before {
+	content: "\73\74\61\63\6b\6f\76\65\72\66\6c\6f\77";
+}
+.social-icon-soundcloud:before {
+	content: "\73\6f\75\6e\64\63\6c\6f\75\64";
+}
+.social-icon-skype:before {
+	content: "\73\6b\79\70\65";
+}
+.social-icon-sharethis:before {
+	content: "\73\68\61\72\65\74\68\69\73";
+}
+.social-icon-rss:before {
+	content: "\72\73\73";
+}
+.social-icon-reddit:before {
+	content: "\72\65\64\64\69\74";
+}
+.social-icon-posterious:before {
+	content: "\70\6f\73\74\65\72\69\6f\75\73";
+}
+.social-icon-pinterest:before {
+	content: "\70\69\6e\74\65\72\65\73\74";
+}
+.social-icon-picasa:before {
+	content: "\70\69\63\61\73\61";
+}
+.social-icon-myspace:before {
+	content: "\6d\79\73\70\61\63\65";
+}
+.social-icon-linkedin:before {
+	content: "\6c\69\6e\6b\65\64\69\6e";
+}
+.social-icon-lastfm:before {
+	content: "\6c\61\73\74\66\6d";
+}
+.social-icon-instagram:before {
+	content: "\69\6e\73\74\61\67\72\61\6d";
+}
+.social-icon-googleplus:before {
+	content: "\67\6f\6f\67\6c\65\70\6c\75\73";
+}
+.social-icon-github:before {
+	content: "\67\69\74\68\75\62";
+}
+.social-icon-forrst:before {
+	content: "\66\6f\72\72\73\74";
+}
+.social-icon-flickr:before {
+	content: "\66\6c\69\63\6b\72";
+}
+.social-icon-facebook:before {
+	content: "\66\61\63\65\62\6f\6f\6b";
+}
+.social-icon-email:before {
+	content: "\65\6d\61\69\6c";
+}
+.social-icon-dribbble:before {
+	content: "\64\72\69\62\62\62\6c\65";
+}
+.social-icon-deviantart:before {
+	content: "\64\65\76\69\61\6e\74\61\72\74";
+}
+.social-icon-delicious:before {
+	content: "\64\65\6c\69\63\69\6f\75\73";
+}
+.social-icon-creattica:before {
+	content: "\63\72\65\61\74\74\69\63\61";
+}
+.social-icon-coroflot:before {
+	content: "\63\6f\72\6f\66\6c\6f\74";
+}
+.social-icon-cargo:before {
+	content: "\63\61\72\67\6f";
+}
+.social-icon-blogger:before {
+	content: "\62\6c\6f\67\67\65\72";
+}
+.social-icon-behance:before {
+	content: "\62\65\68\61\6e\63\65";
+}
+.social-icon-apple:before {
+	content: "\61\70\70\6c\65";
+}
+.social-icon-android:before {
+	content: "\61\6e\64\72\6f\69\64";
+}
+.social-icon-amazon:before {
+	content: "\61\6d\61\7a\6f\6e";
+}
+.social-icon-px:before {
+	content: "\66\69\76\65\68\75\6e\64\72\65\64";
+}
+

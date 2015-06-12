@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- meta http-equiv="REFRESH" content="300" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FlyMon DMS for ESP8266">
+    <meta name="keywords" content="flymon, flyrouter, zftlab, monitoring, monitoring system, time series, time series database, alerting, metrics, telemetry">
+    <meta name="author" content="FlyMon team">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/assets/favicon.ico">
+    <title>FlyMon DMS</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+    <link href="/assets/style.css" rel="stylesheet" type="text/css">
+    <link href="/assets/navbar_purple.css" rel="stylesheet" type="text/css">
+    <!-- Custom Fonts -->
+    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/rondo/style.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+<!-- nav class="navbar navbar-inverse navbar-static-top" -->
+<!-- nav class="navbar navbar-default navbar-static-top" -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- a class="navbar-brand" href="/"><img src="/assets/flymon_logo_grey.svg" alt="FlyMon DMS logo"> FlyMon DMS for ESP8266</a -->
+          <a class="navbar-brand" href="/" style="padding:15px 15px;">FlyMon DMS</a>
+        </div>
+        <div class="collapse navbar-collapse js-navbar">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class="dropdown">
+              <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-book"></i> Документация
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#!/about"><i class="fa fa-star"></i> О проекте</a></li>
+                <li><a href="#!/history"><i class="fa fa-star"></i> История версий</a></li>
+                <li><a href="#team"><i class="fa fa-user"></i> Наша команда</a></li>
+                <li><a href="#">Официальные ссылки</a></li>
+                <li><a href="#!/manual"><i class="fa fa-file-text"></i> Ведение документации</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Подготовка к работе с модулем</a></li>
+                <li><a href="#first">Первичное программирование</a></li>
+                <li><a href="#activation">Сервер активаций прошивок</a></li>
+                <li><a href="#">Универсальный конструктор прошивок</a></li>
+                <li><a href="#">Обновление прошивки через интернет (OTA)</a></li>
+                <li><a href="#">Сброс и восстановление настроек</a></li>
+                <li><a href="#">Общий список метрик для сервисов</a></li>
+                <li><a href="#">FAQ по всем другим вопросам</a></li>
+                <li class="divider"></li>
+                <li><a href="http://esp8266.stack.ee/"><i class="fa fa-leaf"></i> Новый сайт от OmIkRoNiXz</a></li>
+                <li><a href="http://zftlab.org/categories.html"><i class="fa fa-flask"></i> Основной сайт ZFT Lab.</a></li>
+                <li><a href="http://blog.flyrouter.net"><i class="fa fa-rss"></i> Мой старый блог</a></li>
+                <li><a href="https://github.com/zigfisher"><i class="fa fa-github"></i> Исходники на GitHub</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-wrench"></i> Железо
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Модули на SoC ESP8266</a></li>
+                <li><a href="#">Датчики шины I2C</a></li>
+                <li><a href="#">Датчики шины 1-Wire</a></li>
+                <li><a href="#">Датчики аналоговые</a></li>
+                <li><a href="#">Дисплеи LCD и OLED</a></li>
+                <li><a href="#">Приёмо-передатчики RF и IR</a></li>
+                <li><a href="#">Исполнительные устройства</a></li>
+                <li><a href="#">Считывающие устройства</a></li>
+                <li><a href="#">Генераторы импульсов (счётчики)</a></li>
+                <li><a href="#">Источники питания</a></li>
+                <li><a href="#">Корпуса и механика</a></li>
+                <li class="divider"></li>
+                <li><a href="http://zigfisher.github.io/homes-smart/base_bh1750"><i class="fa fa-link"></i> Старый тестовый бложик</a></li>
+                <li><a href="http://benuks.flyboard.ru/topic215.html"><i class="fa fa-link"></i> Бенукс - наши сграбленные картинки</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-cogs"></i> Сервисы
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#flymon">FlyMon DMS</a></li>
+                <li><a href="#thingspeak">ThingSpeak</a></li>
+                <li><a href="#wunderground">WUnderground</a></li>
+                <li><a href="#narodmon">Народный мониторинг</a></li>
+                <li><a href="#majordomo">Система MajorDoMo</a></li>
+                <li><a href="#mqtt">Работа по MQTT</a></li>
+                <li><a href="#android"><i class="fa fa-android"></i> ПО для Android</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Другое</a></li>
+              </ul>
+            </li>
+
+            <li><a href="http://esp8266.flymon.net?macs=18FE3498CCF9,18FE3499A3D1,18FE349B99F9,18FE349B996D,18FE34A04260,18FE34A08C01,18FE349CC475&period=90m"><i class="fa fa-line-chart"></i> Графики <b class="caret"></b></a></li>
+            <li><a href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/62-besprovodnoj-datchik-na-baze-esp8266-dlya-servisa-narodmon-ru"><i class="fa fa-street-view"></i> Сообщество</a></li>
+            <li><a href="http://store6931483.ecwid.com/"><i class="fa fa-umbrella"></i> Магазин</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- div class="jumbotron">
+      <div class="container">
+        <h1><img src="/assets/flymon_logo.svg" alt="FlyMon DMS logo"> FlyMon DMS</h1>
+        <p class="subtitle">An open-source service monitoring system.</p>
+        <p><a class="btn btn-default btn-lg" href="/docs/introduction/getting_started/" role="button">Get Started</a></p>
+      </div>
+    </div -->
+
+
+    <div class="container">
+
+      <div class="main">
+
+        <div id="content">
+        </div>
+
+        <!-- div class="doc-content">
+          <h2 id="about" class="page-header">О проекте<a class="header-anchor" href="#about"></a>
+          </h2>
+
+          <img src="/images/ESP01FULL.jpg">
+
+          <br>
+          <center>
+          You can insert device MAC's and time period in URL:
+          <a href="/?macs=18FE3498CCF9,18FE3499A3D1,18FE349B99F9,18FE349B996D,18FE34A04260,18FE34A08C01,18FE349CC475&period=90m">example</a>
+          </center>
+
+          <p>На базе дешевого WI-FI модуля ESP8266 можно быстро получить беспроводной датчик температуры, влажности,
+             давления, освещенности - достаточно обновить прошивку и собрать простейшую схему. Какие-либо дополнительные
+             микроконтроллеры не требуются. Стартовая страница проекта - <a href="http://homes-smart.ru/esp8266">Homes-Smart.Ru</a></p>
+        </div -->
+
+
+          <!-- div class="row doc-content">
+            <h2 id="team" class="page-header">Наша команда<a class="header-anchor" href="#team"></a>
+            </h2>
+
+            <ul class="nav">
+              <li>MaksMS aka Adminhs - самый главный Босс и автор прошивок !</li>
+              <li>OmIkRoNiXz - эксперт по php, текстам, скриншотам и графико-строению</li>
+              <li>ZigFisher aka FlyRouter - просто так, побелить-покрасить ;)</li>
+            </ul>
+
+            <br>
+
+            <ul class="nav">
+              <li>Amarok - завсегдатай IRC канала</li>
+              <li>Dolfik - пишет ПО под Android с поддержкой MQTT</li>
+              <li>Lstt - гуру экспериментов по сопряжению модуля в системой MajorDoMo</li>
+              <li>Neorender - разработал и предоставил сообществу красивые картинки модулей</li>
+              <li>ZyyyRu - разработал и предоставил сообществу красивые картинки блок-схем</li>
+            </ul>
+
+            <br>
+
+            <p>Кто еще на очереди ?</p>
+
+          </div -->
+
+
+          <!-- div>
+            <h2 id="manual" class="page-header">Ведение документации / Filling manual<a class="header-anchor" href="#manual"></a>
+            </h2>
+
+            <p>Любой желающий, имеющий возможность помочь наполнению Wiki проекта "Homes-Smart on ESP8266", может прислать свои
+               материалы для публикации. Фото рекомендуется выполнять на белом или светлом фоне, размер файла 640x480, предподчительно
+               horizontal.</p>
+          </div -->
+
+
+
+          <!-- div>
+            <h2 id="changelog" class="page-header">История версий / Changelog<a class="header-anchor" href="#changelog"></a>
+            </h2>
+
+            <p><b>0.1.1.244</b> - 2015.06.07
+              <ul class="z">
+                <li><i class="fa fa-leaf"></i> Добавлена поддержка сервиса <a href="http://flymon.sms.ru">SMS.RU</a> (5 сообщений в день бесплатно)</li>
+              </ul></p>
+
+            <p><b>0.1.1.243</b> - 2015.06.06
+              <ul class="z">
+                <li><i class="fa fa-leaf"></i> Добавлена поддержка I2C датчика BME280 (атмосферное давление, влажность и темература)</li>
+                <li><i class="fa fa-leaf"></i> Оптимизирована работа OLED дисплея SSD1306 (ускорен вывод данных, уменьшено потребление ресурсов)</li>
+              </ul></p>
+
+            <p><b>0.1.1.242</b> - 2015.06.05
+              <ul class="z">
+                <li><i class="fa fa-leaf"></i> Обновлен функционал FM приемника TEA5767 (автозапуск радио, вывод данных на экран)</li>
+                <li><i class="fa fa-leaf"></i> Добавлена поддержка FM приёмника с I2C управлением RDA5807M (идёт тестирование)</li>
+              </ul></p>
+
+            <p><b>0.1.1.239</b> - 2015.06.03
+              <ul class="z">
+                <li><i class="fa fa-leaf"></i> Добавлено управление термостатом и FM приемником через планировщик задач</li>
+                <li><i class="fa fa-bug"></i> Исправлен баг, связанный с зависанием модуля при выводе версии прошивки на LCD/OLED дисплей</li>
+              </ul></p>
+          </div -->
+
+
+
+          <!-- div class="row doc-content">
+            <h2 id="photo" class="page-header">Фото-выставка поделок<a class="header-anchor" href="#photo"></a>
+            </h2>
+
+            <img src="images/20150507_BoryanR_esp01_example.jpg">
+
+            <p>Фото - Boryan_R 20150507
+            </p>
+          </div -->
+
+
+          <!-- div id="textile">
+          </div -->
+
+
+        <!-- div class="row">
+          <div class="col-md-3">
+            <h2><i class="fa fa-flask"></i> Data model</h2>
+            <p class="desc">FlyMon implements a highly dimensional data model. Time series are identified by a metric name and a set of key-value pairs.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          </div>
+          <div class="col-md-3">
+            <h2><i class="fa fa-search"></i> Query language</h2>
+            <p class="desc">A flexible query language allows slicing and dicing of collected time series data in order to generate ad-hoc graphs, tables, and alerts.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          </div>
+          <div class="col-md-3">
+            <h2><i class="fa fa-line-chart"></i> Visualization</h2>
+            <p class="desc">FlyMon has multiple modes for visualizing data: a built-in expression browser, a GUI-based dashboard, and a console template language.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          </div>
+          <div class="col-md-3">
+            <h2><i class="fa fa-database"></i> Storage</h2>
+            <p class="desc">FlyMon stores time series in memory and on local disk in an efficient custom format. Scaling is achieved by functional sharding and federation.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          </div>
+        </div -->
+
+
+
+        <!-- div class="social-links">
+          <a href="https://ru.linkedin.com/pub/igor-zalatov/79/980/41a"><i class="social-icon-linkedin"></i></a>
+          <a href="https://github.com/ZigFisher"><i class="social-icon-github"></i></a>
+          <a href="https://www.facebook.com/flyrouter"><i class="social-icon-facebook"></i></a>
+          <a href="http://blog.flyrouter.net/"><i class="social-icon-blogger"></i></a>
+
+          <a href="#"><i class="social-icon-rss"></i></a>
+          <a href="#"><i class="social-icon-social-icon-picasa"></i></a>
+          <a href="#"><i class="social-icon-googleplus"></i></a>
+          <a href="#"><i class="social-icon-email"></i></a>
+        </div -->
+
+      </div>
+
+
+      <hr>
+
+      <footer>
+        <p class="pull-left">
+          &copy; FlyMon DMS team 2010-2015
+        </p>
+        <p class="pull-right">
+          Created for you by <a href="http://flyrouter.net/" title="Go to FlyRouter.net">FlyRouter.net</a>
+        </p>
+      </footer>
+
+    </div>
+
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/assets/javascripts/lodash.min.js"></script>
+    <script src="/assets/javascripts/async.js"></script>
+
+    <script src="/assets/javascripts/influxdb-latest.js"></script>
+
+    <script src="/assets/javascripts/graphs.js"></script>
+    <script src="/assets/javascripts/crutch.js"></script>
+
+    <script src="/assets/javascripts/highcharts.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+    <!-- script src="http://code.highcharts.com/stock/highstock.js"></script -->
+    <script src="/assets/javascripts/gray.js"></script>
+
+    <script src="/assets/javascripts/textile.js"></script>
+    <script src="/assets/javascripts/microblog.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/javascripts/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Google Analytics -->
+    <!-- script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-58468480-1', 'auto');
+      ga('send', 'pageview');
+    </script -->
+  </body>
+</html>
