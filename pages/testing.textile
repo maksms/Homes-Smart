@@ -2,7 +2,10 @@
 h3. Тестовая страница
 
 "i2":#i2
-"iz":#iz
+"dht":#dht
+"ds":#ds
+"oled":#oled
+"irda":#irda
 
 p(#i2). Проверка ссылки
 
@@ -18,19 +21,19 @@ pre. "pre."
 
 h3. Работа с изображениями
 
-!/images/esp01_dht22.jpg!
+p(#dht). !/images/esp01_dht22.jpg!
 
 ---
 
-!/images/esp01_ds18b20.jpg!
+p(#ds). !/images/esp01_ds18b20.jpg!
 
 ---
 
-!/images/esp01_oled.jpg!
+p(#oled). !/images/esp01_oled.jpg!
 
 ---
 
-p(#iz). !/images/esp01_infrared.jpg!
+p(#irda). !/images/esp01_infrared.jpg!
 
 ---
 
