@@ -3,7 +3,7 @@ h3. О проекте
 
 ---
 
-p=. !/images/ESP01FULL.jpg!
+p=. !/images/2014110111.jpg!
 
 p=. *You can insert device MAC's and time period in URL: "example":http://esp8266.pw/?macs=18FE3498CCF9,18FE3499A3D1,18FE349B99F9,18FE349B996D,18FE34A04260,18FE34A08C01,18FE349CC475&period=90m*
 
