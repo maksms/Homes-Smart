@@ -57,28 +57,16 @@ $(document).ready(function(){
         t = e.target;
     // console.log("event ", e);
 
-    // internal link
-    if ( t.hostname == l.hostname &&
-         t.pathname == l.pathname &&
-         t.hash.slice(0,1) == "#" &&
-         t.hash.slice(1,2) != "!"
+    if ( t.hostname === l.hostname &&
+         t.pathname === l.pathname &&
+         t.hash.slice(0,2) === "#!" && true
+         //!(e.which != 1 || e.metaKey || e.ctrlKey)
          ) {
-      return;       // do nothing
+      // console.log(" textile link")
+      e.preventDefault();
+      loadTextile(e.target.hash)
     }
-    // external link
-    if (t.hostname != l.hostname) {
-      return;       // do nothing
-    }
-    // not a left click or key modificators
-    if (e.which != 1 || e.metaKey || e.ctrlKey ) {
-      return;       // do nothing
-    }
-    var path = t.pathname;
-    if (t.hostname === l.hostname && t.pathname === l.pathname) {
-      path = e.target.hash;
-    }
-    e.preventDefault();
-    loadTextile(path)
+
   })
 
   //Pop State
