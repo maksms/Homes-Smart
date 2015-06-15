@@ -20,3 +20,4 @@ h3. Официальные ссылки
 * "Форум: Новая версия прошивки esp8266 0.1.0 с режимом PRO":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/829-novaya-versiya-proshivki-esp8266-0-1-0-s-rezhimom-pro-reliz
 * "Форум: Обсуждение беспроводного датчика на базе ESP8266":http://www.homes-smart.ru/index.php/component/kunena/4-zhelezo/188-obsuzhdenie-besprovodnogo-datchika-na-baze-esp8266
 * "Форум: ESPmeteo - устройство сбора метеоданных":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/837-espmeteo-ustrojstvo-sbora-meteodannykh?limitstart=0
+* "Форум: Замена flash памяти на более ёмкую на модулях esp-01 и др.":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/871-zamena-flash-pamyati-na-bolee-jomkuyu-na-modulyakh-esp-01-i-dr
