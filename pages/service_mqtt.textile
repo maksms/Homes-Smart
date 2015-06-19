@@ -1,0 +1,47 @@
+h3. Введение
+
+p. В данном разделе находятся инструкции по настройке и использованию брокера сообщение MQTT
+
+---
+
+h3(#install_lin). Установка на Linux
+
+p. Пример установке представлен для операционных систем семейства Ubuntu
+
+
+bc. sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
+sudo apt-get update
+sudo apt-get install mosquitto mosquitto-clients python-mosquitto
+
+h3(#setting). Настроим MQTT брокера на датчике
+
+p. На главном экране в секции "Config" выберите команду "Servers"
+
+p. Активизируйте опцию "Enable send MQTT.". В поле "Server" введите адрес компьютера, на котором работает у вас MQTT сервер.
+В поле Period введите интервал в секундах, через который будут отсылаться данные на брокер
+
+p<. !/images/service_mqtt_01.png!
+
+
+h3(#start). Запуск брокера
+
+p. Запуск брокера производиться выполнением команды в консоле
+
+bc. ubuntu@ubuntu:~$ mosquitto
+1403588549: mosquitto version 0.15 (build date 2013-08-23 19:24:40+0000) starting
+1403588549: Opening ipv4 listen socket on port 1883.
+1403588549: Error: Address already in use
+
+h3(#channel_list). Получения списка каналов
+
+p. Для определения всех каналов в которые посылает данные модуль esp подпишемся сразу на все каналы, выполнив в консоле команду:
+
+bc. ubuntu@ubuntu:~$ mosquitto_sub -h localhost -v -t '/#
+/ESP00A057E4/sensors/bmpt 31.0
+/ESP00A057E4/sensors/bmpp 747.90
+/ESP00A057E4/sensors/dsw1 25.0
+/ESP00A057E4/sensors/dhtt2 25.4
+/ESP00A057E4/sensors/dhth2 53.5
+/ESP00A057E4/sensors/freemem 25200
+/ESP00A057E4/sensors/uptime 90711
+
