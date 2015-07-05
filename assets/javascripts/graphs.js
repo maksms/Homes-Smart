@@ -263,7 +263,7 @@
         }
       },
       select: {
-        fields: ["pwm0", "pwm1", "pwm2" ]
+        fields: ["pwm", "pwm0", "pwm1", "pwm2" ]
       }
     },
 
