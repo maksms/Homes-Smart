@@ -126,6 +126,25 @@
 
     {
       chart: {
+        title: 'RSSI level',
+        yAxis: {
+          title: {
+             text: 'dBm'
+          },
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' dBm'
+        }
+      },
+      select: {
+        fields: ["rssi"]
+      }
+    },
+
+
+    {
+      chart: {
         title: 'Temperature',
         yAxis: {
           title: {
@@ -325,25 +344,6 @@
       },
       select: {
         fields: {counter: "DERIVATIVE(counter)"}
-      }
-    },
-
-
-    {
-      chart: {
-        title: 'RSSI level',
-        yAxis: {
-          title: {
-             text: 'dBm'
-          },
-        },
-        tooltip: {
-          crosshairs: true,
-          valueSuffix: ' dBm'
-        }
-      },
-      select: {
-        fields: ["rssi"]
       }
     },
 
