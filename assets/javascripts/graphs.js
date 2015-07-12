@@ -329,5 +329,24 @@
     },
 
 
+    {
+      chart: {
+        title: 'RSSI level',
+        yAxis: {
+          title: {
+             text: 'dBm'
+          },
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' dBm'
+        }
+      },
+      select: {
+        fields: ["rssi"]
+      }
+    },
+
+
   ];
 
