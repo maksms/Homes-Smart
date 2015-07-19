@@ -19,7 +19,7 @@ p. Пришло время, как говорилось в старой сказ
 
 h4. Важная информация
 
-* Организаторы проведения мероприятия: "FlyRouter team":http://flyrouter.net, "FlyMon team":http://esp8266.pw, "ZFT Lab.":http://zftlab.org, "Homes-Smart":http://homes-smart.ru, "NarodMon project":http://narodmon.ru
+* Организаторы проведения мероприятия: "FlyRouter team":http://flyrouter.net, "FlyMon team":http://flymon.net, "ZFT Lab.":http://zftlab.org, "Homes-Smart":http://homes-smart.ru, "NarodMon project":http://narodmon.ru
 * Подача заявок на участие в конкурсе (любым способом): %{color:red}c 11 июля по 1 сентября 2015г.%
 * Предоставление материалов для конкурсе (по Email, указанному ниже): %{color:red}c 1 по 15 сентября 2015г.%
 * Контактный Email для подачи материалов для участия (с 1 сентября): %{color:blue}flyrouter@gmail.com%
@@ -31,6 +31,7 @@ h4. Текущий состав жюри
 
 * %{color:blue}Maks_MS% aka %{color:blue}Adminhs% - автор прошивки "Homes-Smart on ESP8266":http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/62-besprovodnoj-datchik-na-baze-esp8266-dlya-servisa-narodmon-ru
 * %{color:blue}SSar% - автор проекта "Народный мониторинг":http://narodmon.ru/
+* %{color:blue}ZigFisher% - автор проектов "FlyRouter":http://flyrouter.net, "FlyMon":http://flymon.net и "ZFT Lab.":http://zftlab.org
 * %{color:blue}OmIkRoNiXz% - автор нового портала "ESP8266 Firmware Builder":http://esp8266.stack.ee/ (в разработке)
 * %{color:blue}ZyyyRu% - наблюдательный комитет
 
