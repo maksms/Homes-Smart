@@ -19,10 +19,10 @@ p. Пришло время, как говорилось в старой сказ
 
 h4. Важная информация
 
-* Организаторы и спонсоры проведения мероприятия: "FlyRouter team":http://flyrouter.net, "FlyMon team":http://esp8266.pw и "ZFT Lab.":http://zftlab.org
+* Организаторы проведения мероприятия: "FlyRouter team":http://flyrouter.net, "FlyMon team":http://esp8266.pw, "ZFT Lab.":http://zftlab.org, "Homes-Smart":http://homes-smart.ru, "NarodMon project":http://narodmon.ru
 * Подача заявок на участие в конкурсе (любым способом): %{color:red}c 11 июля по 1 сентября 2015г.%
 * Предоставление материалов для конкурсе (по Email, указанному ниже): %{color:red}c 1 по 15 сентября 2015г.%
-* Контактный Email для подачи материалов для участия (с 1 сентября): %{color:blue}contest@esp8266.pw%
+* Контактный Email для подачи материалов для участия (с 1 сентября): %{color:blue}flyrouter@gmail.com%
 * Тема на форуме для обсуждения подготовки к конкурсу: "'Укрощение ESP8266'":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/885-konkurs-festival-ukroshchenie-esp8266
 
 ---
