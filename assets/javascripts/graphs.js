@@ -262,7 +262,7 @@
         }
       },
       select: {
-        fields: ["adc", "adc0", "adc1", "adc2", "adc3" ]
+        fields: ["adc", "adc0", "adc1", "adc2", "adc3", "nrf1a1", "nrf2a1", "nrf3a1", "nrf1a2", "nrf2a2", "nrf3a2" ]
       }
     },
 
@@ -303,7 +303,7 @@
         }
       },
       select: {
-        fields: ["gpioint", "gpio1", "gpio2", "gpio3", "gpio4", "gpio5", "gpio13", "gpiout13"]
+        fields: ["gpioint", "gpio1", "gpio2", "gpio3", "gpio4", "gpio5", "gpio13", "gpiout13", "nrf1g1", "nrf2g1", "nrf3g1", "nrf1g2", "nrf2g2", "nrf3g2"]
       }
     },
 
