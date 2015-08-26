@@ -3,17 +3,17 @@ h3. Конкурс-фестиваль "Укрощение ESP8266"
 
 ---
 
-h4. Цели и задачи мероприятия
+h4. Введение
 
-p. На данной странице будут собираться материалы по проведению конкурса-фестиваля 'Укрощение ESP8266'.
-
-p. Цели и задачи будут описаны более подробно через несколько дней.
+p. Основные цели и задачи конкурса-фестиваля - показать решения и возможности систем на базе SoC ESP8266.
 
 p. Нас ждут несколько номинаций, ценные призы победителям, много полезной информации, обмен опытом и идеями.
 
 p. В будущем, такие конкурсы планируется проводить ежегодно и не только на тематику ESP8266.
 
 p. Пришло время, как говорилось в старой сказке - 'Людей посмотреть и себя показать' !
+
+p. На данной странице будут собираться материалы по проведению конкурса-фестиваля 'Укрощение ESP8266'.
 
 ---
 
@@ -27,15 +27,13 @@ h4. Важная информация
 
 ---
 
-h4. Текущий состав жюри
+h4. Состав жюри
 
 * %{color:blue}Maks_MS% aka %{color:blue}Adminhs% - автор прошивки "Homes-Smart on ESP8266":http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/62-besprovodnoj-datchik-na-baze-esp8266-dlya-servisa-narodmon-ru
 * %{color:blue}SSar% - автор проекта "Народный мониторинг":http://narodmon.ru/
 * %{color:blue}ZigFisher% - автор проектов "FlyRouter":http://flyrouter.net, "FlyMon":http://flymon.net и "ZFT Lab.":http://zftlab.org
 * %{color:blue}OmIkRoNiXz% - автор нового портала "ESP8266 Firmware Builder":http://esp8266.stack.ee/ (в разработке)
 * %{color:blue}ZyyyRu% - наблюдательный комитет
-
-p. Состав жюри может быть увеличен до 20 августа 2015г.
 
 ---
 
@@ -44,8 +42,7 @@ h4. Призовой фонд конкурса
 * %{color:blue}Первое место:% "Orvibo Allone WiFi remote control, model WiWo-R1U":http://ru.aliexpress.com/store/product/Orvibo-Allone-WiFi-remote-control/1189972_1763144423.html
 * %{color:blue}Второе место:% "ESP8266 SDK devboard":http://ru.aliexpress.com/item/1sets-ESP8266-Wireless-Wifi-Module-Develop-Board-8266-SDK-Development-Chip-with-the-cable/32291062990.html + LCD I2C 1602 + DHT22 + BMP180 + BH1750 + SR501 + RF TRX 433 MHz + Buzzer + Power supply
 * %{color:blue}Третье место:% Portable WiFi 3G OpenWrt router for ESP8266 (pre-set MQTT) + USB I2C adapter + USB webcam + Power supply
-* %{color:blue}Поощрение:% "ESP8266 demo board":http://ru.aliexpress.com/item/ESP8266-ESP-12-wifi-module-esp8266-serial-wifi-coexistence-full-AP-test-board/32328889422.html - доступно 10 шт.
-* %{color:blue}Поощрение:% Broadcom BCM6348 OpenWRT router board (pre-set MQTT) - доступно 20 шт.
+* %{color:blue}Поощрение:% "ESP8266 demo board":http://ru.aliexpress.com/item/ESP8266-ESP-12-wifi-module-esp8266-serial-wifi-coexistence-full-AP-test-board/32328889422.html
 
 p. Призы победителям отправляются почтой РФ в течение месяца после окончания конкурса. Доставка оплачивается организатором.
 
@@ -91,4 +88,3 @@ h4. Список участников, подавших заявки на кон
 * 12.07.2015 *toyotik* (?) | " "
 * 11.07.2015 *Skeych* (с.Желябовка, Крым) | "Сельская школьная метеостанция"
 * 11.07.2015 *kollj* (г.Белгород-Днестровский, Украина) | "Малая автоматизация и контроль в квартире"
-
