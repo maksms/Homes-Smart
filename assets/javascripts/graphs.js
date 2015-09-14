@@ -107,7 +107,7 @@
 
     {
       chart: {
-        title: 'Power Voltage',
+        title: 'Voltage',
         yAxis: {
           title: {
              text: 'mV'
@@ -119,7 +119,25 @@
         }
       },
       select: {
-        fields: ["vdd"]
+        fields: ["vdd", "inav"]
+      }
+    },
+
+    {
+      chart: {
+        title: 'Current',
+        yAxis: {
+          title: {
+             text: 'mA'
+          }
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' mA'
+        }
+      },
+      select: {
+        fields: ["inac"]
       }
     },
 
