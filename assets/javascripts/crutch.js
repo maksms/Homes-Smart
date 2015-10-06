@@ -197,11 +197,11 @@
       $('#no-data').hide();
       window.charts = [];
       window.influxdb = new InfluxDB({
-        host: 'essence.flymon.net',
+        host: 'builder.flymon.net',
         port: 8086,
         username: 'webface',
         password: 'webface2015',
-        database: 'esp8266'
+        database: 'flymon'
       });
       Highcharts.setOptions({
         global: {
