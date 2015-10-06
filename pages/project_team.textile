@@ -9,6 +9,7 @@ h3. Наша команда
 * "Slayer":https://github.com/slayer - OnLine консультант по Go, Ruby, JS и прочему...
 * "ZyyyRu":https://github.com/ZyyyRu - разработал и предоставил сообществу красивые картинки блок-схем
 * "Lstt":https://github.com/lstt2005 - гуру экспериментов по сопряжению модуля в системами MajorDoMo и IObroker
+* "KU ":http://mod-book.ru/forum/ aka Kuslik - инженер, тестер - лудить паять, вёдра починять
 * Dolfik - пишет ПО под Android с поддержкой MQTT
 * Neorender - разработал и предоставил сообществу красивые картинки блок-схем
 
