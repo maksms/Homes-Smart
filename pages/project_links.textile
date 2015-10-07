@@ -15,6 +15,7 @@ h3. Популярные темы на форуме
 * "Конкурс-фестиваль 'Укрощение ESP8266'":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/885-konkurs-festival-ukroshchenie-esp8266
 * "Android клиент для прошивок Homes-Smart - MQTT IoT":http://homes-smart.ru/index.php/component/kunena/5-soft/894-android-klient-dlya-proshivok-homes-smart-mqtt-iot
 
+* "Прием сигналов 433/315мгц на esp8266":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/844-priem-signalov-433-315mgts-na-esp8266
 * "Конструктор кода в конструкторе прошивки ESP8266":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/903-konstruktor-koda-v-konstruktore-proshivki-esp8266
 * "Бета тест версии прошивки ESP8266 0.1.1":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/843-beta-test-versii-proshivki-esp8266-0-1-1
 * "Покупка интересных модулей и компонентов в интернет":http://homes-smart.ru/index.php/component/kunena/4-zhelezo/879-pokupka-interesnykh-modulej-i-komponentov-v-internet
