@@ -119,7 +119,7 @@
         }
       },
       select: {
-        fields: ["vdd", "inav"]
+        fields: ["vdd", "inav", "cvv"]
       }
     },
 
@@ -137,7 +137,7 @@
         }
       },
       select: {
-        fields: ["inac"]
+        fields: ["inac", "cvc"]
       }
     },
 
