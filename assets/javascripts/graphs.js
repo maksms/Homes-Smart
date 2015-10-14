@@ -366,5 +366,47 @@
     },
 
 
+    {
+      chart: {
+        title: 'AC Voltage',
+        yAxis: {
+          title: {
+             text: 'V'
+          },
+          min: 0
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' V'
+        }
+      },
+      select: {
+        fields: ["pwv"]
+      }
+    },
+
+
+    {
+      chart: {
+        title: 'AC Current',
+        yAxis: {
+          title: {
+             text: 'A'
+          },
+          min: 0
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' A'
+        }
+      },
+      select: {
+        fields: ["pwc"]
+      }
+    },
+
+
+
+
   ];
 
