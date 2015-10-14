@@ -406,6 +406,46 @@
     },
 
 
+    {
+      chart: {
+        title: 'AC Power',
+        yAxis: {
+          title: {
+             text: 'Wt'
+          },
+          min: 0
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' Wt'
+        }
+      },
+      select: {
+        fields: ["pww"]
+      }
+    },
+
+
+    {
+      chart: {
+        title: 'AC Power/Hours',
+        yAxis: {
+          title: {
+             text: 'Wt/h'
+          },
+          min: 0
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' Wt/h'
+        }
+      },
+      select: {
+        fields: ["pwwh"]
+      }
+    },
+
+
 
 
   ];
