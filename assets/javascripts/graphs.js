@@ -381,7 +381,7 @@
         }
       },
       select: {
-        fields: ["pwv"]
+        fields: ["pmv"]
       }
     },
 
@@ -401,7 +401,7 @@
         }
       },
       select: {
-        fields: ["pwc"]
+        fields: ["pmc"]
       }
     },
 
@@ -421,7 +421,7 @@
         }
       },
       select: {
-        fields: ["pww"]
+        fields: ["pmw"]
       }
     },
 
@@ -441,7 +441,7 @@
         }
       },
       select: {
-        fields: ["pwwh"]
+        fields: ["pmwh"]
       }
     },
 
