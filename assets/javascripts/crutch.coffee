@@ -5,6 +5,7 @@ class @Chart
   constructor: (@data, @done) ->
     @series = []
     @parseArgs window.location.search.substring(1)
+    return @done() unless @isShowChart()
     @loadData =>
       @show()
       @done() if @done
@@ -17,22 +18,36 @@ class @Chart
       @argv[decodeURIComponent(b[0])] = decodeURIComponent(b[1])
     @argv
 
+  isShowChart: =>
+    # log "argv", @argv
+    if @argv.graphs
+      graphs = @argv.graphs.split(",")
+      # Detect first occurance of @data.name
+      !! _.find graphs, (item) => item == @data.name
+    else
+      true
+
 
   queryFields: =>
     fields = @data.select?.fields
     if fields?.join?
+      # array
       fields
     else if typeof fields is 'object'
-      _.map fields, (k, v) -> "#{k} AS #{v}"
+      # convert {counter: "cnt1"}" -> "cnt1" AS counter
+      _.map fields, (val, key) -> "#{val} AS #{key}"
     else
+      # some string value
       [@data.select.fields]
 
   fieldNames: =>
     fields = @data.select?.fields
     if fields?.join?
+      # array
       fields
     else if typeof fields is 'object'
-      _.map fields, (k, v) -> v
+      # convert {counter: "cnt1"}" -> "counter"
+      _.map fields, (val, key) -> key
     else
       [@data.select.fields]
 
@@ -64,11 +79,11 @@ class @Chart
   loadData: (cb) =>
     log "query: ", @query()
     influxdb.query @query(), (points) =>
-      log "points:", points
+      # log "points:", points
       nodes = _.groupBy points, (point) -> point.host
       series = {}
 
-      log "nodes:", nodes
+      # log "nodes:", nodes
       nodes = _.groupBy points, (point) -> point.host
       _.each nodes, (points, host) =>
         # console.log "#{host} points: ", points
@@ -127,11 +142,11 @@ $(document).ready ->
 
 
     window.influxdb = new InfluxDB
-      host: 'esp8266.flymon.net'
+      host: 'builder.flymon.net'
       port: 8086
       username: 'webface'
       password: 'webface2015'
-      database: 'esp8266'
+      database: 'flymon'
 
     Highcharts.setOptions global: useUTC: false
 

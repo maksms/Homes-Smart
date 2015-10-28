@@ -25,8 +25,12 @@
       this.macCondition = bind(this.macCondition, this);
       this.fieldNames = bind(this.fieldNames, this);
       this.queryFields = bind(this.queryFields, this);
+      this.isShowChart = bind(this.isShowChart, this);
       this.series = [];
       this.parseArgs(window.location.search.substring(1));
+      if (!this.isShowChart()) {
+        return this.done();
+      }
       this.loadData((function(_this) {
         return function() {
           _this.show();
@@ -48,14 +52,31 @@
       return this.argv;
     };
 
+    Chart.prototype.isShowChart = function() {
+      var graphs, r;
+      if (this.argv.graphs) {
+        graphs = this.argv.graphs.split(",");
+        log("graphs: " + this.argv.graphs + ", data: " + this.data.name);
+        r = !!_.find(graphs, (function(_this) {
+          return function(item) {
+            return item === _this.data.name;
+          };
+        })(this));
+        log("show: " + r);
+        return r;
+      } else {
+        return true;
+      }
+    };
+
     Chart.prototype.queryFields = function() {
       var fields, ref;
       fields = (ref = this.data.select) != null ? ref.fields : void 0;
       if ((fields != null ? fields.join : void 0) != null) {
         return fields;
       } else if (typeof fields === 'object') {
-        return _.map(fields, function(k, v) {
-          return k + " AS " + v;
+        return _.map(fields, function(val, key) {
+          return val + " AS " + key;
         });
       } else {
         return [this.data.select.fields];
@@ -68,8 +89,8 @@
       if ((fields != null ? fields.join : void 0) != null) {
         return fields;
       } else if (typeof fields === 'object') {
-        return _.map(fields, function(k, v) {
-          return v;
+        return _.map(fields, function(val, key) {
+          return key;
         });
       } else {
         return [this.data.select.fields];
@@ -114,12 +135,10 @@
       return influxdb.query(this.query(), (function(_this) {
         return function(points) {
           var name, nodes, serie, series;
-          log("points:", points);
           nodes = _.groupBy(points, function(point) {
             return point.host;
           });
           series = {};
-          log("nodes:", nodes);
           nodes = _.groupBy(points, function(point) {
             return point.host;
           });

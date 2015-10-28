@@ -56,6 +56,7 @@
 */
 
     {
+      name: 'uptime',
       chart: {
         chart: {
           type: 'line'
@@ -87,6 +88,7 @@
 
 
     {
+      name: 'freemem',
       chart: {
         title: 'Free Memory',
         yAxis: {
