@@ -108,6 +108,7 @@
 
 
     {
+      name: 'voltage',
       chart: {
         title: 'Voltage',
         yAxis: {
@@ -125,7 +126,9 @@
       }
     },
 
+
     {
+      name: 'current',
       chart: {
         title: 'Current',
         yAxis: {
@@ -145,6 +148,7 @@
 
 
     {
+      name: 'rssi',
       chart: {
         title: 'RSSI level',
         yAxis: {
@@ -164,6 +168,7 @@
 
 
     {
+      name: 'temperature',
       chart: {
         title: 'Temperature',
         yAxis: {
@@ -192,6 +197,7 @@
 
 
     {
+      name: 'humidity',
       chart: {
         title: 'Humidity',
         yAxis: {
@@ -229,6 +235,7 @@
 
 
     {
+      name: 'pressure',
       chart: {
         title: 'Atmospheric pressure',
         yAxis: {
@@ -248,6 +255,7 @@
 
 
     {
+      name: 'brightness',
       chart: {
         title: 'Brightness',
         yAxis: {
@@ -268,6 +276,7 @@
 
 
     {
+      name: 'adc',
       chart: {
         title: 'Analog-to-digital converter',
         yAxis: {
@@ -288,6 +297,7 @@
 
 
     {
+      name: 'pwm',
       chart: {
         title: 'Pulse-Width Modulation status',
         yAxis: {
@@ -308,6 +318,7 @@
 
 
     {
+      name: 'gpio',
       chart: {
         title: 'GPIO Monitor',
         yAxis: {
@@ -329,6 +340,7 @@
 
 
     {
+      name: 'counter',
       chart: {
         title: 'Counter',
         yAxis: {
@@ -369,6 +381,7 @@
 
 
     {
+      name: 'acvolt',
       chart: {
         title: 'AC Voltage',
         yAxis: {
@@ -389,6 +402,7 @@
 
 
     {
+      name: 'accurr',
       chart: {
         title: 'AC Current',
         yAxis: {
@@ -409,6 +423,7 @@
 
 
     {
+      name: 'acpwr',
       chart: {
         title: 'AC Power',
         yAxis: {
@@ -429,6 +444,7 @@
 
 
     {
+      name: 'acpwhr',
       chart: {
         title: 'AC Power/Hours',
         yAxis: {
