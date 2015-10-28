@@ -56,7 +56,7 @@
 */
 
     {
-      name: 'uptime',
+      name: 'up',
       chart: {
         chart: {
           type: 'line'
@@ -88,7 +88,7 @@
 
 
     {
-      name: 'freemem',
+      name: 'mem',
       chart: {
         title: 'Free Memory',
         yAxis: {
@@ -108,7 +108,7 @@
 
 
     {
-      name: 'voltage',
+      name: 'volt',
       chart: {
         title: 'Voltage',
         yAxis: {
@@ -128,7 +128,7 @@
 
 
     {
-      name: 'current',
+      name: 'curr',
       chart: {
         title: 'Current',
         yAxis: {
@@ -197,7 +197,7 @@
 
 
     {
-      name: 'humidity',
+      name: 'hum',
       chart: {
         title: 'Humidity',
         yAxis: {
@@ -235,7 +235,7 @@
 
 
     {
-      name: 'pressure',
+      name: 'pres',
       chart: {
         title: 'Atmospheric pressure',
         yAxis: {
@@ -255,7 +255,7 @@
 
 
     {
-      name: 'brightness',
+      name: 'bright',
       chart: {
         title: 'Brightness',
         yAxis: {
@@ -340,7 +340,7 @@
 
 
     {
-      name: 'counter',
+      name: 'count',
       chart: {
         title: 'Counter',
         yAxis: {
@@ -444,7 +444,7 @@
 
 
     {
-      name: 'acpwhr',
+      name: 'acpwh',
       chart: {
         title: 'AC Power/Hours',
         yAxis: {
