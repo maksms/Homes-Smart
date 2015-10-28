@@ -56,7 +56,7 @@
 */
 
     {
-      name: 'uptime',
+      name: 'up',
       chart: {
         chart: {
           type: 'line'
@@ -88,7 +88,7 @@
 
 
     {
-      name: 'freemem',
+      name: 'mem',
       chart: {
         title: 'Free Memory',
         yAxis: {
@@ -108,6 +108,7 @@
 
 
     {
+      name: 'volt',
       chart: {
         title: 'Voltage',
         yAxis: {
@@ -125,7 +126,9 @@
       }
     },
 
+
     {
+      name: 'curr',
       chart: {
         title: 'Current',
         yAxis: {
@@ -145,6 +148,7 @@
 
 
     {
+      name: 'rssi',
       chart: {
         title: 'RSSI level',
         yAxis: {
@@ -164,6 +168,7 @@
 
 
     {
+      name: 'temp',
       chart: {
         title: 'Temperature',
         yAxis: {
@@ -192,6 +197,7 @@
 
 
     {
+      name: 'hum',
       chart: {
         title: 'Humidity',
         yAxis: {
@@ -229,6 +235,7 @@
 
 
     {
+      name: 'pres',
       chart: {
         title: 'Atmospheric pressure',
         yAxis: {
@@ -248,6 +255,7 @@
 
 
     {
+      name: 'bright',
       chart: {
         title: 'Brightness',
         yAxis: {
@@ -268,6 +276,7 @@
 
 
     {
+      name: 'adc',
       chart: {
         title: 'Analog-to-digital converter',
         yAxis: {
@@ -288,6 +297,7 @@
 
 
     {
+      name: 'pwm',
       chart: {
         title: 'Pulse-Width Modulation status',
         yAxis: {
@@ -308,6 +318,7 @@
 
 
     {
+      name: 'gpio',
       chart: {
         title: 'GPIO Monitor',
         yAxis: {
@@ -323,12 +334,13 @@
         }
       },
       select: {
-        fields: ["gpioint", "gpio1", "gpio2", "gpio3", "gpio4", "gpio5", "gpio13", "gpio12", "gpiout4", "gpiout5", "gpiout12", "gpiout13", "gpiout14", "nrf1g1", "nrf2g1", "nrf3g1", "nrf1g2", "nrf2g2", "nrf3g2"]
+        fields: ["mcpgpio0", "mcpgpio1", "mcpgpio2", "mcpgpio3", "mcpgpio4", "mcpgpio5", "mcpgpio6", "mcpgpio7", "mcpgpio7", "mcpgpio9", "mcpgpio10", "mcpgpio11", "mcpgpio12", "mcpgpio13", "mcpgpio14", "mcpgpio15", "gpioint", "gpio1", "gpio2", "gpio3", "gpio4", "gpio5", "gpio13", "gpio12", "gpiout4", "gpiout5", "gpiout12", "gpiout13", "gpiout14", "nrf1g1", "nrf2g1", "nrf3g1", "nrf1g2", "nrf2g2", "nrf3g2"]
       }
     },
 
 
     {
+      name: 'count',
       chart: {
         title: 'Counter',
         yAxis: {
@@ -369,6 +381,7 @@
 
 
     {
+      name: 'acvolt',
       chart: {
         title: 'AC Voltage',
         yAxis: {
@@ -389,6 +402,7 @@
 
 
     {
+      name: 'accurr',
       chart: {
         title: 'AC Current',
         yAxis: {
@@ -409,6 +423,7 @@
 
 
     {
+      name: 'acpwr',
       chart: {
         title: 'AC Power',
         yAxis: {
@@ -429,6 +444,7 @@
 
 
     {
+      name: 'acpwh',
       chart: {
         title: 'AC Power/Hours',
         yAxis: {
