@@ -168,7 +168,7 @@
 
 
     {
-      name: 'temperature',
+      name: 'temp',
       chart: {
         title: 'Temperature',
         yAxis: {
