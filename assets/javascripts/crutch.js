@@ -215,7 +215,7 @@
       if (this.argv.period) {
         return this.argv.period;
       } else {
-        return "12h";
+        return "6h";
       }
     };
 
