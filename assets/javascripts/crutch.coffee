@@ -1,11 +1,20 @@
 window.log = -> try console.log.apply(console, arguments)
 debug = -> console.debug.apply arguments if window.console
 
+parseArgs = (qstr = window.location.search.substring(1)) ->
+  argv = {}
+  a = qstr.split('&')
+  for i of a
+    b = a[i].split('=')
+    argv[decodeURIComponent(b[0])] = decodeURIComponent(b[1])
+  argv
+
+
 class @Chart
   constructor: (@data, @done) ->
     log "Chart#constructor(): init chart '#{@data.name}'"
     @series = []
-    @parseArgs window.location.search.substring(1)
+    @argv = parseArgs()
 
   loadAndShow: =>
     if @isShowChart()
@@ -80,14 +89,6 @@ class @Chart
     # console.log "params: ", params
     if params.series.length > 0
       @chart = new Highcharts.Chart params
-
-  parseArgs: (qstr) ->
-    @argv = {}
-    a = qstr.split('&')
-    for i of a
-      b = a[i].split('=')
-      @argv[decodeURIComponent(b[0])] = decodeURIComponent(b[1])
-    @argv
 
   isShowChart: =>
     # log "argv", @argv
@@ -173,9 +174,18 @@ $(document).ready ->
 
     Highcharts.setOptions global: useUTC: false
 
+    # Filter and sort graphs by graphs location params
+    if graph_list = parseArgs().graphs
+      graph_list = graph_list.split(",")
+      filtered_graphs = []
+      _.each graph_list, (graph_name) ->
+        g = _.find window.graphs, (g) -> g.name == graph_name
+        filtered_graphs.push g if g?
+      window.graphs = filtered_graphs
+
     # Sequental via promises
     chain = Promise.resolve()
-    graphs.forEach (graph_data)->
+    window.graphs.forEach (graph_data)->
       chain = chain.then( =>
         data = _.cloneDeep(defaults)
         _.merge data, graph_data
