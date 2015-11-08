@@ -381,7 +381,7 @@
 
 
     {
-      name: 'errconn',
+      name: 'err',
       chart: {
         title: 'Link Error Counter',
         yAxis: {
