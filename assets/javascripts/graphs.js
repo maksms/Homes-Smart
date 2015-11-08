@@ -381,6 +381,27 @@
 
 
     {
+      name: 'error',
+      chart: {
+        title: 'Link Error Counter',
+        yAxis: {
+          title: {
+             text: 'ps'
+          },
+          min: 0
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' ps'
+        }
+      },
+      select: {
+        fields: ["errconn"]
+      }
+    },
+
+
+    {
       name: 'acvolt',
       chart: {
         title: 'AC Voltage',
