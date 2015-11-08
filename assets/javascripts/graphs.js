@@ -355,7 +355,7 @@
         }
       },
       select: {
-        fields: ["counter", "countrst", "nrf1c1", "nrf2c1", "nrf3c1", "nrf1c2", "nrf2c2", "nrf3c2"]
+        fields: ["counter", "countrst", "errconn", "nrf1c1", "nrf2c1", "nrf3c1", "nrf1c2", "nrf2c2", "nrf3c2"]
       }
     },
 
@@ -376,27 +376,6 @@
       },
       select: {
         fields: {counter: "DERIVATIVE(counter)"}
-      }
-    },
-
-
-    {
-      name: 'err',
-      chart: {
-        title: 'Link Error Counter',
-        yAxis: {
-          title: {
-             text: 'ps'
-          },
-          min: 0
-        },
-        tooltip: {
-          crosshairs: true,
-          valueSuffix: ' ps'
-        }
-      },
-      select: {
-        fields: ["errconn"]
       }
     },
 
