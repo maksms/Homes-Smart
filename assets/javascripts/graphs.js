@@ -90,7 +90,7 @@
     {
       name: 'mem',
       chart: {
-        title: 'Free Memory',
+        title: 'Memory',
         yAxis: {
           title: {
             text: 'bytes'
@@ -102,7 +102,7 @@
         }
       },
       select: {
-        fields: ["freemem"]
+        fields: ["freemem", "memory"]
       }
     },
 
