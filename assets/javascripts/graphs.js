@@ -325,7 +325,7 @@
           title: {
              text: 'status'
           },
-          min: 0
+          min: 0,
           max: 1
         },
         tooltip: {
