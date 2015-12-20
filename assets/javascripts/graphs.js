@@ -229,7 +229,7 @@
         }
       },
       select: {
-        fields: ["amh", "dhth1", "dhth2", "bmeh", "nrf1h1", "nrf2h1", "nrf3h1", "nrf1h2", "nrf2h2", "nrf3h2", "shth", "sht10h"]
+        fields: ["amh", "dhth1", "dhth2", "bmeh", "nrf1h1", "nrf2h1", "nrf3h1", "nrf1h2", "nrf2h2", "nrf3h2", "shth"]
       }
     },
 
