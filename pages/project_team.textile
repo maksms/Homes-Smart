@@ -6,6 +6,7 @@ h3. Наша команда
 * "MaksMS":https://github.com/maksms aka "Adminhs":http://homes-smart.ru - самый главный Босс и автор прошивок !
 * "OmIkRoNiXz":https://github.com/OmIkRoNiXz - эксперт по php, текстам, скриншотам и графико-строению
 * "ZigFisher":http://zftlab.org aka "FlyRouter":http://flyrouter.net - просто так, побелить-покрасить ;)
+* "Umka":https://u-m.biz/shop/ - разработчик электронных схем, плат и комплексов (в т.ч. OpenDevBoard)
 * "Slayer":https://github.com/slayer - OnLine консультант по Go, Ruby, JS и прочему...
 * "ZyyyRu":https://github.com/ZyyyRu - разработал и предоставил сообществу красивые картинки блок-схем
 * "Lstt":https://github.com/lstt2005 - гуру экспериментов по сопряжению модуля в системами MajorDoMo и IObroker
