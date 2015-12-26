@@ -381,6 +381,27 @@
 
 
     {
+      name: 'scale',
+      chart: {
+        title: 'Scale',
+        yAxis: {
+          title: {
+             text: 'mux'
+          },
+          min: 0
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' mux'
+        }
+      },
+      select: {
+        fields: ["scale"]
+      }
+    },
+
+
+    {
       name: 'error',
       chart: {
         title: 'Link Error Counter',
