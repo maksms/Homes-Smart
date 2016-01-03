@@ -355,7 +355,7 @@
         }
       },
       select: {
-        fields: ["counter", "countrst", "nrf1c1", "nrf2c1", "nrf3c1", "nrf1c2", "nrf2c2", "nrf3c2", "pcfcnt1", "pcfcnt2"]
+        fields: ["counter", "counter2", "counter3", "counter4", "countrst", "nrf1c1", "nrf2c1", "nrf3c1", "nrf1c2", "nrf2c2", "nrf3c2", "pcfcnt1", "pcfcnt2"]
       }
     },
 
