@@ -1,0 +1,26 @@
+
+h3. Тестирование системы FlyPeek
+
+---
+
+p=. <img src="/images/00E0F8017072.jpg" oncontextmenu="return false;" width="100%">
+
+p=. Камера-1
+
+---
+
+p=. <img src="/images/00E0F800B706.jpg" oncontextmenu="return false;" width="100%">
+
+p=. Камера-2
+
+---
+
+p=. <img src="/images/00E0F8017EE8.jpg" oncontextmenu="return false;" width="100%">
+
+p=. Камера-4
+
+---
+
+p=. <img src="http://ubnt.flymon.net/webcam/0027226193AD.jpg" oncontextmenu="return false;" width="100%">
+
+p=. Камера-5
