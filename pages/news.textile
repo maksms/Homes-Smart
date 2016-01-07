@@ -3,7 +3,7 @@ h3. Новости
 
 ---
 
-p. *2016.01.07* Ранее разные сервера "esp8266.flymon.net":http://esp8266.flymon.net и "monitor.flymon.net":http://monitor.flymon.net теперь объединены в один и имеют общую информационную панель.
+p. *2016.01.07* Сервера "esp8266.flymon.net":http://esp8266.flymon.net и "monitor.flymon.net":http://monitor.flymon.net теперь объединены в один и имеют общую информационную панель.
 
 p. *2015.10.07* Можно начинать тестировать "дашбоарды":http://console.flymon.net/#source=dashboard/zav.json и вносить свои конструктивные "предложения":http://zftlab.org/pages/2015091100.html
 
