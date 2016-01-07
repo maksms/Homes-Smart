@@ -9,22 +9,3 @@ p=. Киев, Дарницкий район, в направлении Южно
 
 p=. Координаты: 50.401931 / 30.616391
 
----
-
-p=. <img src="http://ubnt.flymon.net/webcam/2C67FBD263D4.jpg" oncontextmenu="return false;" width="100%">
-
-p=. Киев, Дарницкий район, в направлении Южного моста. Тестинг.
-
-p=. Координаты: 50.401931 / 30.616391
-
----
-
-p=. <img src="http://ubnt.flymon.net/webcam/0027226193D4.jpg" oncontextmenu="return false;" width="100%">
-
-p=. Ubiquiti Симферополь. Тестинг.
-
----
-
-p=. <img src="http://ubnt.flymon.net/webcam/0027226193AD.jpg" oncontextmenu="return false;" width="100%">
-
-p=. Ubiquiti Симферополь. Тестинг.
