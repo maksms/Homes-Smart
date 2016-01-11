@@ -1,0 +1,8 @@
+
+h3. О проекте FlyMon dashboard
+
+---
+
+p. *FlyMon dashboard* является отдельным компонентом общей системы управления устройствами "FlyMon DMS":http://flymon.net.
+
+---
