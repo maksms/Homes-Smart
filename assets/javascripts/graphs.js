@@ -430,7 +430,8 @@
           title: {
              text: 'V'
           },
-          min: 0
+          min: 190,
+          max: 250
         },
         tooltip: {
           crosshairs: true,
