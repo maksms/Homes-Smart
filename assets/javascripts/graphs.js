@@ -429,9 +429,7 @@
         yAxis: {
           title: {
              text: 'V'
-          },
-          min: 190,
-          max: 250
+          }
         },
         tooltip: {
           crosshairs: true,
