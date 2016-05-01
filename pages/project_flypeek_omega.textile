@@ -1,0 +1,14 @@
+
+h3. Тестирование системы FlyPeek
+
+---
+
+p=. <img src="http://ubnt.flymon.net/webcam/archive/0027226193AD/last.jpg" oncontextmenu="return false;" width="100%">
+
+p=. Вид на трассу Керчь-Феодосия. Обновление каждые 5 мин.
+
+---
+
+p=. <img src="http://ubnt.flymon.net/webcam/archive/0027226193D4/last.jpg" oncontextmenu="return false;" width="100%">
+
+p=. Вид на вход территории. Обновление каждые 5 мин.
