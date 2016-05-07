@@ -39,7 +39,7 @@
 			};
 		}
 		Page.prototype.connect = function(){
-			var url = "ws://mqtt.flymon.net:9001";
+			var url = "ws://mqtt.flyhub.org:9001";
 			mosq.connect(url);
 		};
 		Page.prototype.disconnect = function(){
