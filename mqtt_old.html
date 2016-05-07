@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MQTT over WebSockets</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script type='text/javascript' src='/mosquitto.js'></script>
+<script type='text/javascript' src='/jquery-1.7.2.min.js'></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28176897-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+	<h1>FlyMon MQTT testing</h1>
+	<h2>Usage</h2>
+	<p>This is a very simple example of MQTT. Click Connect, then use the Subscribe buttons. You should see text appear below.</p>
+<div id="broker">
+	<h2>Broker mqtt.flymon.net</h2>
+	<p>Нажмите кнопку "Connect".<br>При успешном подключении к серверу будет получен ответ "CONNACK 0"</p>
+	<input class="but" id="connect-button" type="button" value="Connect">
+	<input class="but" id="disconnect-button" type="button" value="Disconnect">
+</div>
+<!-- div id="publish">
+	<h2>Publish</h2>
+	<p>Topic: <input class="txt" id="pub-topic-text" type="text" value="you@email/DeviceName/metric"></p>
+	<p>Message: <input class="txt" id="payload-text" type="text" value=""></p>
+	<input class="but" id="publish-button" type="button" value="Publish">
+</div -->
+<div id="subscribe">
+	<h2>Subscribe/Unsubscribe</h2>
+	<p><b>Получение данных, переданных по протоколу MQTT:</b>
+	<br>&nbsp; - замените в форме, находящейся ниже, первый октет топика на свой Email, зарегистрированный в FlyMon DMS ;
+	<br>&nbsp; - не трогайте остальные два октета "/+/#", если хотите получать данные по всем устройствам ;
+	<br>&nbsp; - замените октет "+" на "HostName", если хотите получать данные по конкретному устройству ;
+	<br>&nbsp; - при подписке, сразу появятся данные с устройства, полученные последними на сервере (за месяц) ;
+	</p>
+	<p><b>Получение данных, переданных по протоколу FlyMon:</b>
+	<br>&nbsp; - замените в форме, находящейся ниже, первый октет топика на Email "demo@flymon.net";
+	<br>&nbsp; - замените второй октет "+" на MAC вашего устройства, написанный в нижнем регистре (маленькими буквами) ;
+	<br>&nbsp; - при подписке, данные с устройства появятся только в момент их передачи (интервал 5 мин.) ;
+	</p>
+	<p><b>Дополнительные пояснения для обоих протоколов:</b>
+	<br>&nbsp; - третий октет "/#" трогать не нужно, если хотите видеть все метрики с устройства ;
+	<br>&nbsp; - если есть необходимость, можно заменить октет "#" на название контретной метрики, сенсора или gpio ;
+	<br>&nbsp; - все данные в октетах вводятся без кавычек "" ;
+	</p>
+	<p>Topic: <input class="txt" id="sub-topic-text" type="text" value="you@email.com/+/#"></p>
+	<p>
+	<input class="but" id="subscribe-button" type="button" value="Subscribe">
+	<input class="but" id="unsubscribe-button" type="button" value="Unsubscribe">
+	</p>
+</div>
+<div id="debug"></div>
+
+<script src="/tmo.js" type="text/javascript"></script>
+</body>
+</html>
