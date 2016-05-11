@@ -1,12 +1,14 @@
 
-h3. Официальные ссылки
+h3. Официальные ссылки проекта WiFi-IoT on ESP8266
 
 ---
 
+* "Конструктор и сервер активаций прошивок":http://www.wifi-iot.ru
 * "Демонстрационное устройство":http://demo.wifi-iot.ru/
 * -
 * "Беспроводной датчик на базе ESP8266 с отправкой данных на удаленные сервера":http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/62-besprovodnoj-datchik-na-baze-esp8266-dlya-servisa-narodmon-ru
 * "Сверхдешевый WI-FI модуль ESP8266":http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/sverkhdeshevyj-wi-fi-modul-esp8266
+* "UART bridge на ESP8266. Подключаем свои м/к к сети":http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/72-uart-bridge-na-esp8266
 * "Конструктор прошивок для ESP8266 и личный кабинет активаций":http://www.wifi-iot.ru/
 
 

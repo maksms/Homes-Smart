@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- meta http-equiv="REFRESH" content="300" -->
+    <meta http-equiv="REFRESH" content="600">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="FlyMon DMS for ESP8266">
+    <meta name="description" content="FlyMon DMS">
     <meta name="keywords" content="flymon, flyrouter, zftlab, monitoring, monitoring system, time series, time series database, alerting, metrics, telemetry">
     <meta name="author" content="FlyMon team">
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/assets/favicon.ico">
@@ -20,10 +20,10 @@
     <link href="/assets/rondo/style.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
   </head>
+
+
   <body>
 
-<!-- nav class="navbar navbar-inverse navbar-static-top" -->
-<!-- nav class="navbar navbar-default navbar-static-top" -->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -33,48 +33,82 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- a class="navbar-brand" href="/"><img src="/assets/flymon_logo_grey.svg" alt="FlyMon DMS logo"> FlyMon DMS for ESP8266</a -->
-          <a class="navbar-brand" href="/" style="padding:15px 15px;">Homes-Smart on ESP8266</a>
+          <a class="navbar-brand" href="/" style="padding:15px 15px;">Monitor</a>
         </div>
+
         <div class="collapse navbar-collapse js-navbar">
           <ul class="nav navbar-nav navbar-right">
 
+
+            <li><a href="#!/about"><i class="fa fa-newspaper-o"></i> Новости</a></li>
+
             <li class="dropdown">
               <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-book"></i> Документация
+                <i class="fa fa-line-chart"></i> FlyMon DMS
                 <span class="caret"></span>
               </a>
-              <ul class="dropdown-menu">
-                <li><a href="#!/project_about"><i class="fa fa-star"></i> О проекте</a></li>
-                <li><a href="#!/project_history"><i class="fa fa-tree"></i> История версий</a></li>
-                <li><a href="#!/project_team"><i class="fa fa-user-plus"></i> Наша команда</a></li>
-                <li><a href="#!/project_links"><i class="fa fa-link"></i> Официальные ссылки</a></li>
-                <li><a href="#!/project_manual"><i class="fa fa-book"></i> Ведение документации</a></li>
-                <li><a href="#!/project_contest"><i class="fa fa-cubes"></i> Конкурс 'Укрощение ESP8266'</a></li>
+              <ul class="dropdown-menu" -->
+                <li><a href="#!/project_flypeek_frame"><i class="fa fa-photo"></i> О проекте FlyPeek</a></li>
+                <li><a href="#!/project_flyboard_about"><i class="fa fa-dashboard"></i> О проекте FlyMon dashboard</a></li>
                 <li class="divider"></li>
+                <li><a href="#!/project_flypeek_chatyrdag"><i class="fa fa-photo"></i> OnLine WebCam [Демерджи и Чатыр-Даг]</a></li>
+                <li><a href="#!/project_flypeek_omega"><i class="fa fa-photo"></i> OnLine WebCam [Керченский полуостров]</a></li>
+                <li><a href="#!/project_flypeek_kiev"><i class="fa fa-photo"></i> OnLine WebCam [Киев, Дарницкий район]</a></li>
+                <li class="divider"></li>
+                <li><a href="/?macs=000C4370AAD3,18FE349CC3D1&graphs=temp,hum&period=3h"><i class="fa fa-line-chart"></i> Вегетарий ZAV</a></li>
+                <li><a href="?macs=18FE34DE1372,18FE34DE1529,5CCF7F0A74B0&period=24h"><i class="fa fa-line-chart"></i> Трёхканальный энергомонитор</a></li>
+                <li><a href="/?macs=18FE34A041F0&graphs=acvolt,accurr,acpwr,acpwh&period=3h"><i class="fa fa-line-chart"></i> Тестовый энергомонитор 220V</a></li>
+                <li><a href="/?macs=18FE34A6D32F,0212000155B4&graphs=up,temp,hum,pres,gpio&period=3h"><i class="fa fa-line-chart"></i> Экспериментальный птичник</a></li>
+                <li class="divider"></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/1.json"><i class="fa fa-dashboard"></i> Демонстрационная MQTT панель (базовая)</a></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/3.json"><i class="fa fa-dashboard"></i> Демонстрационный энергомер электросети v.1</a></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/5.json"><i class="fa fa-dashboard"></i> Демонстрационный энергомер электросети v.2</a></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/4.json"><i class="fa fa-dashboard"></i> Демонстрационный контроль в птичнике</a></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/6.json"><i class="fa fa-dashboard"></i> Демонстрационная метеостанция, г.Киев</a></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/7.json"><i class="fa fa-dashboard"></i> Демонстрационная метеостанция, Киевская обл.</a></li>
+                <li class="divider"></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/kotel.json"><i class="fa fa-dashboard"></i> Контроль газового котла</a></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/azs.json"><i class="fa fa-dashboard"></i> Контроль грузовых автомобилей</a></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/zav.json"><i class="fa fa-dashboard"></i> Контроль в вегетарии </a></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/dacha.json"><i class="fa fa-dashboard"></i> Дачный участок [Sigma]</a></li>
+                <li><a href="http://console.flymon.net/#source=dashboard/gvozdev.json"><i class="fa fa-dashboard"></i> Дачный участок [Gvozdev]</a></li>
+                <li class="divider"></li>
+                <li><a href="http://esp8266.flymon.net/example.html"><i class="fa fa-dashboard"></i> Отладчик данных для MQTT и FlyMon</a></li>
+                <li class="divider"></li>
+                <li><a href="http://crimea-board.net/index.php?showtopic=153642"><i class="fa fa-user"></i> Форум: crimea-board.net [FlyPeek]</a></li>
+                <li><a href="http://www.x-crimea.com/forum/viewtopic.php?f=9&t=2303"><i class="fa fa-user"></i> Форум: x-crimea.com [FlyPeek]</a></li>
+                <li><a href="http://www.skilur.net/2015/11/blog-post.html"><i class="fa fa-user"></i> Блог: skilur.net [FlyPeek]</a></li>
+                <li><a href="http://simferopol.in/topic/27374-avtomoika-moi-sam-v-simferopole/"><i class="fa fa-user"></i> Форум: simferopol.in [MoySam]</a></li>
+              </ul>
+            </li>
+
+            <li><a href="http://flyhub.org"><i class="fa fa-thumbs-o-up"></i> FlyHub</a></li>
+
+            <li><a href="http://wifi-iot.com"><i class="fa fa-thumbs-o-up"></i> WiFi-IoT</a></li>
+
+            <li><a href="http://zftlab.org/categories.html"><i class="fa fa-wrench"></i> ZFT Lab.</a></li>
+
+
+            <li class="dropdown">
+              <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-wrench"></i> ESP8266
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" -->
+                <li><a href="#!/project_esp8266_about"><i class="fa fa-star"></i> О проекте WiFi-IoT on ESP8266</a></li>
+                <li><a href="#!/project_esp8266_history"><i class="fa fa-tree"></i> История версий</a></li>
+                <li><a href="#!/project_esp8266_team"><i class="fa fa-user-plus"></i> Наша команда</a></li>
+                <li><a href="#!/project_esp8266_links"><i class="fa fa-link"></i> Официальные ссылки</a></li>
+                <li><a href="#!/project_esp8266_manual"><i class="fa fa-book"></i> Ведение документации</a></li>
+                <li><a href="http://benuks.flyboard.ru/topic215.html"><i class="fa fa-link"></i> Бенукс - наши сграбленные картинки</a></li>
+                <li><a href="https://github.com/zigfisher"><i class="fa fa-github"></i> Исходники на GitHub</a></li>
                 <!-- li><a href="#">Подготовка к работе с модулем</a></li -->
                 <!-- li><a href="#first">Первичное программирование</a></li -->
-                <li><a href="http://www.wifi-iot.ru/">Конструктор и сервер активаций прошивок</a></li>
-                <li><a href="http://demo.homes-smart.ru:8266/">Демонстрационное устройство разработчика</a></li>
                 <!-- li><a href="#">Обновление прошивки через интернет (OTA)</a></li -->
                 <!-- li><a href="#">Сброс и восстановление настроек</a></li -->
                 <!-- li><a href="#">Общий список метрик для сервисов</a></li -->
                 <!-- li><a href="#">FAQ по всем другим вопросам</a></li -->
                 <li class="divider"></li>
-                <li><a href="http://esp8266.stack.ee/"><i class="fa fa-leaf"></i> Новый сайт от OmIkRoNiXz</a></li>
-                <li><a href="http://zftlab.org/pages/2014110100.html"><i class="fa fa-flask"></i> Основной сайт ZFT Lab.</a></li>
-                <li><a href="http://blog.flyrouter.net"><i class="fa fa-rss"></i> Старый блог ZFT Lab.</a></li>
-                <li><a href="http://benuks.flyboard.ru/topic215.html"><i class="fa fa-link"></i> Бенукс - наши сграбленные картинки</a></li>
-                <li><a href="https://github.com/zigfisher"><i class="fa fa-github"></i> Исходники на GitHub</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-wrench"></i> Железо
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
                 <!-- li><a href="#">Модули на SoC ESP8266</a></li -->
                 <li><a href="#!/hardware_i2c"><i class="fa fa-thumbs-o-up"></i> Датчики шины I2C</a></li>
                 <li><a href="#!/hardware_1wire"><i class="fa fa-thumbs-o-up"></i> Датчики шины 1-Wire</a></li>
@@ -86,31 +120,13 @@
                 <!-- li><a href="#">Генераторы импульсов (счётчики)</a></li -->
                 <!-- li><a href="#">Источники питания</a></li -->
                 <!-- li><a href="#">Корпуса и механика</a></li -->
-                <li><a href="#!/hardware_mods"><i class="fa fa-thumbs-o-up"></i> Аппаратная модернизация</a></li>
-                <li><a href="#!/service_mqtt">Работа с MQTT</a></li>
+                <li class="divider"></li>
+                <li><a href="#!/project_esp8266_hwmod"><i class="fa fa-thumbs-o-up"></i> Аппаратная модернизация</a></li>
+                <li class="divider"></li>
+                <li><a href="#!/project_esp8266_mqtt">Работа с MQTT</a></li>
               </ul>
             </li>
 
-            <!-- li class="dropdown">
-              <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-cogs"></i> Сервисы
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" -->
-                <!-- li><a href="http://flymon.net">FlyMon DMS</a></li -->
-                <!-- li><a href="#thingspeak">ThingSpeak</a></li -->
-                <!-- li><a href="#wunderground">WUnderground</a></li -->
-                <!-- li><a href="narodmon.ru">Народный мониторинг</a></li -->
-                <!-- li><a href="#majordomo">Система MajorDoMo</a></li -->
-                <!-- li><a href="http://zftlab.org/pages/2015072700.html"><i class="fa fa-android"></i> ПО для Android</a></li -->
-                <!-- li class="divider"></li -->
-                <!-- li><a href="#">Другое</a></li -->
-              <!-- /ul>
-            </li -->
-
-            <!-- li><a href="/?macs=18FE34A04B68,18FE3498CCF9,18FE3499A3D1,18FE349B99F9,18FE349B996D,18FE34A04260,18FE34A08C01,18FE349CC475&period=90m"><i class="fa fa-line-chart"></i> Графики <b class="caret"></b></a></li -->
-            <!-- li><a href="http://homes-smart.ru/index.php/component/kunena/4-zhelezo"><i class="fa fa-street-view"></i> Сообщество</a></li -->
-            <!-- li><a href="http://store6931483.ecwid.com/"><i class="fa fa-umbrella"></i> Магазин</a></li -->
 
           </ul>
         </div>
@@ -118,87 +134,44 @@
     </nav>
 
 
-
-    <!-- div class="jumbotron">
-      <div class="container">
-        <h1><img src="/assets/flymon_logo.svg" alt="FlyMon DMS logo"> FlyMon DMS</h1>
-        <p class="subtitle">An open-source service monitoring system.</p>
-        <p><a class="btn btn-default btn-lg" href="/docs/introduction/getting_started/" role="button">Get Started</a></p>
-      </div>
-    </div -->
-
-
     <div class="container">
 
       <div class="main">
 
+            <!-- div class="row">
+                <div class="col-lg-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <i class="fa fa-info-circle"></i> Пожалуйста, зарегистрируйтесь на новом сервисе <a href="http://flyhub.org" class="alert-link">FlyHub</a> 
+                           Текущий ресурс будет работать, но все новшества будут теперь только там.
+                    </div>
+                </div>
+            </div -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <i class="fa fa-info-circle"></i> Внимание ! 10.05.2016 стык <a href="http://flymon.net" class="alert-link">mqtt.flymon.net</a> 
+                           <=> <a href="http://flyhub.org" class="alert-link">mqtt.flyhub.org</a> будет разорван. 
+                           Пожалуйста используйте в своих проектах только <a href="http://flyhub.org" class="alert-link">mqtt.flyhub.org</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.row -->
+
+
         <div id="content">
         </div>
 
-        <!-- div class="doc-content">
-          <h2 id="about" class="page-header">О проекте<a class="header-anchor" href="#about"></a>
-          </h2>
-
-          <img src="/images/ESP01FULL.jpg">
-
-          <br>
-          <center>
-          You can insert device MAC's and time period in URL:
-          <a href="/?macs=18FE3498CCF9,18FE3499A3D1,18FE349B99F9,18FE349B996D,18FE34A04260,18FE34A08C01,18FE349CC475&period=90m">example</a>
-          </center>
-
-          <p>На базе дешевого WI-FI модуля ESP8266 можно быстро получить беспроводной датчик температуры, влажности,
-             давления, освещенности - достаточно обновить прошивку и собрать простейшую схему. Какие-либо дополнительные
-             микроконтроллеры не требуются. Стартовая страница проекта - <a href="http://homes-smart.ru/esp8266">Homes-Smart.Ru</a></p>
-        </div -->
-
-
-
-        <!-- div class="row">
-          <div class="col-md-3">
-            <h2><i class="fa fa-flask"></i> Data model</h2>
-            <p class="desc">FlyMon implements a highly dimensional data model. Time series are identified by a metric name and a set of key-value pairs.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-          </div>
-          <div class="col-md-3">
-            <h2><i class="fa fa-search"></i> Query language</h2>
-            <p class="desc">A flexible query language allows slicing and dicing of collected time series data in order to generate ad-hoc graphs, tables, and alerts.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-          </div>
-          <div class="col-md-3">
-            <h2><i class="fa fa-line-chart"></i> Visualization</h2>
-            <p class="desc">FlyMon has multiple modes for visualizing data: a built-in expression browser, a GUI-based dashboard, and a console template language.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-          </div>
-          <div class="col-md-3">
-            <h2><i class="fa fa-database"></i> Storage</h2>
-            <p class="desc">FlyMon stores time series in memory and on local disk in an efficient custom format. Scaling is achieved by functional sharding and federation.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-          </div>
-        </div -->
-
-
-
-        <!-- div class="social-links">
-          <a href="https://ru.linkedin.com/pub/igor-zalatov/79/980/41a"><i class="social-icon-linkedin"></i></a>
-          <a href="https://github.com/ZigFisher"><i class="social-icon-github"></i></a>
-          <a href="https://www.facebook.com/flyrouter"><i class="social-icon-facebook"></i></a>
-          <a href="http://blog.flyrouter.net/"><i class="social-icon-blogger"></i></a>
-
-          <a href="#"><i class="social-icon-rss"></i></a>
-          <a href="#"><i class="social-icon-social-icon-picasa"></i></a>
-          <a href="#"><i class="social-icon-googleplus"></i></a>
-          <a href="#"><i class="social-icon-email"></i></a>
-        </div -->
-
       </div>
-
 
       <hr>
 
       <footer>
         <p class="pull-left">
-          Homes-Smart on ESP8266 &copy; 2014-2015
+          FlyMon DMS &copy; 2007-2016
         </p>
         <p class="pull-right">
           Created for you by <a href="http://zftlab.org" title="Go to ZFTLab.org">ZFT Lab.</a>
@@ -206,7 +179,6 @@
       </footer>
 
     </div>
-
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -241,4 +213,6 @@
       ga('send', 'pageview');
     </script -->
   </body>
+
 </html>
+

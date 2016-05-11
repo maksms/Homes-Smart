@@ -1,1 +1,1 @@
-# Homes-Smart on ESP8266
+# FlyMon DMS mini-monitor

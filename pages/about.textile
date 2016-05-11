@@ -1,0 +1,30 @@
+
+h3. Новости
+
+---
+
+p. *2016.01.07* Сервера "esp8266.flymon.net":http://esp8266.flymon.net и "monitor.flymon.net":http://monitor.flymon.net теперь объединены и имеют общую информационную панель.
+
+p. *2015.10.07* Можно начинать тестировать "дашбоарды":http://console.flymon.net/#source=dashboard/zav.json и вносить свои конструктивные "предложения":http://zftlab.org/pages/2015091100.html
+
+p. *2015.10.05* Подведены итоги конкурса-фестиваля "Укрощение ESP8266":http://zftlab.org/pages/2015080100.html
+
+---
+
+<html>
+<blockquote class="twitter-tweet" lang="ru"><p lang="ru" dir="ltr">31.10.2015 запущен проект <a href="https://twitter.com/hashtag/FlyPeek?src=hash">#FlyPeek</a> - фото с горных камер (обновляются каждые 5 минут).&#10;<a href="https://t.co/EE5TFpesMu">https://t.co/EE5TFpesMu</a> <a href="https://t.co/vLhzREAcqu">pic.twitter.com/vLhzREAcqu</a></p>&mdash; Igor Zalatov (@FlyRouter) <a href="https://twitter.com/FlyRouter/status/663318942916702208">8 ноября 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</html>
+
+---
+
+h3. Контакты
+
+---
+
+p. Будем весьма признательны за конструктивный "фидбек":https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D1%81%D0%B2%D1%8F%D0%B7%D1%8C о наших проектах,
+
+* Email/Talk: flyrouter@gmail.com
+* ICQ       : 69278245
+* Phone (RU): +79788167817
+* Phone (UA): +380509895117

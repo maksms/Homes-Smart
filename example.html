@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Example</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- link href="css/plugins/sb-admin.css" rel="stylesheet" -->
+
+    <!-- Morris Charts CSS -->
+    <link href="/assets/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><b>[Example]</b></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="http://esp8266.flymon.net">Монитор</a>
+                    </li>
+                    <li>
+                        <a href="http://zftlab.org/categories.html">Разделы</a>
+                    </li>
+                    <li>
+                        <a href="http://zftlab.org/contacts.html">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="http://zftlab.org/tags.html">Теги</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <i class="fa fa-info-circle"></i> Функция MQTT мониторинга теперь доступна у каждого устройства и на сервисе <a href="http://flyhub.org" class="alert-link">FlyHub</a> в разделе Devices => select => Listen.
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="alert alert-info alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <i class="fa fa-info-circle"></i> Хочешь знать больше о проекте Araneus ? Жми <a href="http://zftlab.org/pages/2016031400.html" class="alert-link">сюда</a> !
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+
+
+
+
+            <div class="page-header">
+                <h3>Usage FlyMon MQTT monitor</h3>
+            </div>
+
+
+           <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-flask"></i> Quick Manual</h3>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#eng" data-toggle="tab">English</a>
+                                </li>
+                                <li><a href="#connect" data-toggle="tab">Соединение с сервером</a>
+                                </li>
+                                <li><a href="#mqtt" data-toggle="tab">MQTT протокол</a>
+                                </li>
+                                <li><a href="#flymon" data-toggle="tab">FlyMon протокол</a>
+                                </li>
+                                <li><a href="#other" data-toggle="tab">Дополнения</a>
+                                </li>
+                                <li><a href="#publish" data-toggle="tab">Отправка данных</a>
+                                </li>
+                                <li><a href="#features" data-toggle="tab">Фичи</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="eng">
+                                    <p></p>
+                                    <p></p>
+                                    <p>This is a very simple example of MQTT. Click Connect, then use the Subscribe buttons. You should see text appear below.</p>
+                                </div>
+                                <div class="tab-pane fade" id="connect">
+                                    <h4>Соединение с сервером:</h4>
+                                    <p>- Нажмите кнопку "Connect".</p>
+                                    <p>- При успешном подключении к серверу в диалоговом окне ниже будет получен ответ "CONNACK 0".</p>
+                                    <p>- Измените первый октет топика на свой Email и нажмите кнопку "Subscribe". В окне ниже будет виден MQTT трафик.</p>
+                                    <p>- При разрыве соединения или отключении будет получен ответ "Lost connection".</p>
+                                </div>
+                                <div class="tab-pane fade" id="mqtt">
+                                    <h4>Получение данных, переданных по протоколу MQTT:</h4>
+                                    <p>- Замените в форме, находящейся ниже, первый октет топика на свой Email, зарегистрированный в FlyMon DMS.</p>
+                                    <p>- Не изменяйте остальные два октета "/+/#", если хотите получать данные по всем устройствам.</p>
+                                    <p>- Замените октет "+" на "DeviceName", если хотите получать данные по конкретному устройству.</p>
+                                    <p>- При подписке, сразу будут отражены данные с устройства, полученные последними на сервере (за месяц).</p>
+                                </div>
+                                <div class="tab-pane fade" id="flymon">
+                                    <h4>Получение данных, переданных по протоколу FlyMon:</h4>
+                                    <p> - Замените в форме, находящейся ниже, первый октет топика на Email "demo@flymon.net".</p>
+                                    <p> - Замените второй октет "+" на MAC вашего устройства, написанный в нижнем регистре (маленькими буквами).</p>
+                                    <p> - При подписке, данные с устройства появятся только в момент их передачи (интервал 5 мин.).</p>
+                                </div>
+                                <div class="tab-pane fade" id="other">
+                                    <h4>Дополнительные пояснения для обоих протоколов:</h4>
+                                    <p> - Третий октет "/#" трогать не нужно, если хотите видеть все метрики с устройства.</p>
+                                    <p> - Если есть необходимость, можно заменить октет "#" на название контретной метрики, сенсора или gpio.</p>
+                                    <p> - Все данные в октетах вводятся без кавычек "".</p>
+                                </div>
+                                <div class="tab-pane fade" id="publish">
+                                    <h4>Отправка данных:</h4>
+                                    <p> - Измените первый октет топика на свой Email, укажите имя устройства, метрику и значение. Нажмите кнопку "Publish".</p>
+                                </div>
+                                <div class="tab-pane fade" id="features">
+                                    <h4>Фичи:</h4>
+                                    <p> - если подписаться на топик "timestamp" (одно слово и без кавычек), то каждую минуту будут приходить временные метки.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+
+
+
+
+
+
+
+
+
+                <div class="page-header">
+                    <h3>Connect, Subscribe and Publish</h3>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Insert you topic for subscribe here</label -->
+                                <input class="form-control" id="sub-topic-text" type="text" value="you@email.com/+/#">
+                                <!-- p class="help-block">Example block-level help text here.</p -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Insert you topic for publish here (optional)</label>
+                                <input class="form-control" id="pub-topic-text" type="text" value="you@email.com/DeviceName/metric">
+                                <!-- p class="help-block">Example block-level help text here.</p -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Insert you value for publish here (optional)</label>
+                                <input class="form-control" id="payload-text" type="text" value="value">
+                                <!-- p class="help-block">Example block-level help text here.</p -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input class="btn btn-sm btn-success" id="connect-button" type="button" value="Connect">
+                        <input class="btn btn-sm btn-info" id="subscribe-button" type="button" value="Subscribe">
+                        <input class="btn btn-sm btn-primary" id="publish-button" type="button" value="Publish">
+                        <input class="btn btn-sm btn-warning" id="unsubscribe-button" type="button" value="Unsubscribe">
+                        <input class="btn btn-sm btn-danger" id="disconnect-button" type="button" value="Disconnect">
+                    </div>
+                </div>
+                <!-- /.row -->
+
+
+
+
+
+
+                <div class="page-header">
+                    <h3>View MQTT traffic</h3>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-list-alt"></i> MQTT traffic</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="traff"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="page-header">
+                    <h3>Example Devices Search</h3>
+                </div>
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-linux"></i> Traffic Table</h3>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Topic</th>
+                                            <th>Content</th>
+                                            <th>Last Received</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="success">
+                                            <td>flyrouter@gmail.com/ZFT_Lab/uptime</td>
+                                            <td>186430</td>
+                                            <td>2016.01.29 01:17.32</td>
+                                        </tr>
+                                        <tr class="info">
+                                            <td>flyrouter@gmail.com/ZFT_Lab/amt</td>
+                                            <td>23.1</td>
+                                            <td>2016.01.29 01:17.32</td>
+                                        </tr>
+                                        <tr class="warning">
+                                            <td>flyrouter@gmail.com/ZFT_Lab/amh</td>
+                                            <td>37.8</td>
+                                            <td>2016.01.29 01:17.38</td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td>flyrouter@gmail.com/ZFT_Lab/freemem</td>
+                                            <td>26312</td>
+                                            <td>2016.01.29 01:17.39</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+
+
+            <div class="page-header">
+                <h3>Araneus router</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <h4 class="list-group-item-heading">Функциональные возможности IoT хаба Araneus ("брикет")</h4>
+                        </a>
+                        <a href="#" class="list-group-item">Организация канала связи tun/tap для удалённого администрирования сети клиента</a>
+                        <a href="#" class="list-group-item">Передача скриншотов с UVC WEB-камер, подключенных к USB порту, на сервер FlyPeek</a>
+                        <a href="#" class="list-group-item">Наличие необходимых драйверов и утилит для прошивки модулей ESP8266, подключаемых к USB</a>
+                        <a href="#" class="list-group-item">Локальный MQTT сервер (все устройства соединяются только с локальным брокером)</a>
+                        <a href="#" class="list-group-item">WiFi точка (доступа для модулей ESP8266)</a>
+                        <a href="#" class="list-group-item">Канал связи 3G через GPRS/CDMA модемы, подключенные к USB порту</a>
+                        <a href="#" class="list-group-item">Интерфейс I2C для подключения датчиков и исполнительных устройств</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="page-header">
+                    <h3>Home Plan</h3>
+                </div>
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-sitemap"></i> Very simple example</h3>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <pre><body>
+                                    <br/>╔══════════════════════════════════════════════════════════════════════╗<br/>║ 27.50C                                          off                  ║<br/>╨                                                                      ║<br/>                                                                       ╨<br/>    off                off<br/><br/>╥<br/>╠══════════╡      ╞═════════╗                     off<br/>║                           ║<br/>║                           ║<br/>║      off         off      ║<br/>║                           ║<br/>║                           ║            ╔═╤─────────────────┐         ╥ Tempr = 0.45C<br/>║                           ╠═══╗        ║ │       off       │         ║ Humud = 91.99%<br/>╠═══════════════════════════╣   ║        ║ │       off       │         ║ U_Sol = 3.853v<br/>║ 26.20C       on           ╠═══╣        ╚═╧─────────────────┘         ║ U_Ion = 3.874v<br/>║ 25.80%                    │   │                                      ╨ I_Sol = 0.0ma<br/>║ 742.57mmHr                │   │                                        Lumin = 952lux<br/>║                           │   │<br/>║                           └───┘<br/>║<br/>║                                        off                 off<br/>║<br/>║                           ┌───┐<br/>║                           │   │<br/>║                           │   │                                      ╥<br/>║            off            │   │                                      ║<br/>╚═══════════════════════════╧═══╧══════════════════════════════════════╝<br/><br/>
+                                </body></pre>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+
+                <div class="page-header">
+                    <h3>График</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-area-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="page-header">
+                    <h3>График</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Line Graph Example with Tooltips</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-line-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+
+
+
+
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Mosquitto JavaScript -->
+    <script type="text/javascript" src="/assets/mqtt/mosquitto.js"></script>
+    <script type="text/javascript" src="/assets/mqtt/tmo.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/assets/morris/raphael.min.js"></script>
+    <script src="/assets/morris/morris.min.js"></script>
+    <script src="/assets/morris/morris-data.js"></script>
+
+
+
+</body>
+
+</html>

@@ -90,7 +90,7 @@
     {
       name: 'mem',
       chart: {
-        title: 'Free Memory',
+        title: 'Memory',
         yAxis: {
           title: {
             text: 'bytes'
@@ -102,7 +102,7 @@
         }
       },
       select: {
-        fields: ["freemem"]
+        fields: ["freemem", "memory"]
       }
     },
 
@@ -191,7 +191,7 @@
         }
       },
       select: {
-        fields: ["amt", "lm", "bmpt", "bmet", "dhtt1", "dhtt2", "ds", "dsw1", "dsw2", "dsw3", "dsw4", "dsw5", "dsw6", "dsw7", "dsw8", "dsw9", "dsw10", "dsw11", "dsw12", "dsw13", "dsw14", "dsw15", "heat", "nrf1t1", "nrf2t1", "nrf3t1", "nrf1t2", "nrf2t2", "nrf3t2", "shtt"]
+        fields: ["amt", "lm", "bmpt", "bmet", "dhtt1", "dhtt2", "ds", "dsw1", "dsw2", "dsw3", "dsw4", "dsw5", "dsw6", "dsw7", "dsw8", "dsw9", "dsw10", "dsw11", "dsw12", "dsw13", "dsw14", "dsw15", "heat", "nrf1t1", "nrf2t1", "nrf3t1", "nrf1t2", "nrf2t2", "nrf3t2", "shtt", "sht10t", "rcs0t"]
       }
     },
 
@@ -229,7 +229,7 @@
         }
       },
       select: {
-        fields: ["amh", "dhth1", "dhth2", "bmeh", "nrf1h1", "nrf2h1", "nrf3h1", "nrf1h2", "nrf2h2", "nrf3h2", "shth"]
+        fields: ["amh", "dhth1", "dhth2", "bmeh", "nrf1h1", "nrf2h1", "nrf3h1", "nrf1h2", "nrf2h2", "nrf3h2", "shth", "sht10h"]
       }
     },
 
@@ -334,7 +334,7 @@
         }
       },
       select: {
-        fields: ["mcpgpio0", "mcpgpio1", "mcpgpio2", "mcpgpio3", "mcpgpio4", "mcpgpio5", "mcpgpio6", "mcpgpio7", "mcpgpio7", "mcpgpio9", "mcpgpio10", "mcpgpio11", "mcpgpio12", "mcpgpio13", "mcpgpio14", "mcpgpio15", "gpioint", "gpio1", "gpio2", "gpio3", "gpio4", "gpio5", "gpio13", "gpio12", "gpiout4", "gpiout5", "gpiout12", "gpiout13", "gpiout14", "nrf1g1", "nrf2g1", "nrf3g1", "nrf1g2", "nrf2g2", "nrf3g2"]
+        fields: ["mcpgpio0", "mcpgpio1", "mcpgpio2", "mcpgpio3", "mcpgpio4", "mcpgpio5", "mcpgpio6", "mcpgpio7", "mcpgpio8", "mcpgpio9", "mcpgpio10", "mcpgpio11", "mcpgpio12", "mcpgpio13", "mcpgpio14", "mcpgpio15", "gpioint", "gpio0", "gpio1", "gpio2", "gpio3", "gpio4", "gpio5", "gpio12", "gpio13", "gpio14", "gpio15", "gpio16", "gpiout0", "gpiout1", "gpiout2", "gpiout3", "gpiout4", "gpiout5", "gpiout12", "gpiout13", "gpiout14", "gpiout15", "gpiout16", "nrf1g1", "nrf2g1", "nrf3g1", "nrf1g2", "nrf2g2", "nrf3g2", "gpio200", "gpio201", "gpio202", "gpio203", "gpio204", "gpio205", "gpio206", "gpio207", "gpio208", "gpio209", "gpio210", "gpio211", "gpio212", "gpio213", "gpio214", "gpio215", "gpiout220", "gpiout221", "gpiout222", "gpiout223", "gpiout224", "gpiout225", "gpiout226", "gpiout227"]
       }
     },
 
@@ -355,7 +355,7 @@
         }
       },
       select: {
-        fields: ["counter", "countrst", "nrf1c1", "nrf2c1", "nrf3c1", "nrf1c2", "nrf2c2", "nrf3c2"]
+        fields: ["counter", "counter1", "counter2", "counter3", "counter4", "countrst", "countrst1", "countrst2", "countrst3", "countrst4", "nrf1c1", "nrf2c1", "nrf3c1", "nrf1c2", "nrf2c2", "nrf3c2", "pcfcnt1", "pcfcnt2"]
       }
     },
 
@@ -381,14 +381,55 @@
 
 
     {
+      name: 'scale',
+      chart: {
+        title: 'Scale',
+        yAxis: {
+          title: {
+             text: 'mux'
+          },
+          min: 0
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' mux'
+        }
+      },
+      select: {
+        fields: ["scale"]
+      }
+    },
+
+
+    {
+      name: 'error',
+      chart: {
+        title: 'Link Error Counter',
+        yAxis: {
+          title: {
+             text: 'ps'
+          },
+          min: 0
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' ps'
+        }
+      },
+      select: {
+        fields: ["errconn"]
+      }
+    },
+
+
+    {
       name: 'acvolt',
       chart: {
         title: 'AC Voltage',
         yAxis: {
           title: {
              text: 'V'
-          },
-          min: 0
+          }
         },
         tooltip: {
           crosshairs: true,
