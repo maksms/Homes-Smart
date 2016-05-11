@@ -1,0 +1,21 @@
+{
+  "name": "Homes-Smart",
+  "homepage": "https://github.com/ZigFisher/Homes-Smart",
+  "authors": [
+    "Vladislav Moskovets <github@vlad.org.ua>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "es6-promise-pool": "~2.4.1"
+  }
+}

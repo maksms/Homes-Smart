@@ -1,0 +1,42 @@
+{
+  "name": "flycrutch",
+  "version": "0.0.1",
+  "description": "FlyCrutch",
+  "main": "Gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-bower": "0.0.13",
+    "gulp-coffee": "^2.3.1",
+    "gulp-coffeelint": "^0.6.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-debug": "^2.1.2",
+    "gulp-filter": "^4.0.0",
+    "gulp-go": "^1.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.1",
+    "node-notifier": "^4.5.0",
+    "show-js-error": "^1.2.0",
+    "tiny-lr": "^0.2.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "flycrutch"
+  ],
+  "author": "Ai na ne na ne",
+  "license": "private"
+}

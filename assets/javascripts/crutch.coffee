@@ -1,5 +1,7 @@
 window.log = -> try console.log.apply(console, arguments)
-debug = -> console.debug.apply arguments if window.console
+debug = ->
+  if window.debug? and window.console
+    console.debug.apply arguments
 
 parseArgs = (qstr = window.location.search.substring(1)) ->
   argv = {}
@@ -12,13 +14,20 @@ parseArgs = (qstr = window.location.search.substring(1)) ->
 
 class @Chart
   constructor: (@data, @done) ->
-    log "Chart#constructor(): init chart '#{@data.name}'"
+    # log "Chart#constructor(): init chart '#{@data.name}'"
     @series = []
     @argv = parseArgs()
 
   loadAndShow: =>
     if @isShowChart()
-      log "Chart[#{@data.name}]#loadAndShow()"
+      # log "Chart[#{@data.name}]#loadAndShow()"
+
+      @div = $('<div>').addClass("chart")
+      $("#content").append @div
+
+      @div.append $('<h2>').text("Loading #{@data.name}...")
+      @div.append $('<img>').attr("src", "assets/images/ajax-loader.gif")
+
       @loadData()
         .then(@transformData)
         .then =>
@@ -30,14 +39,14 @@ class @Chart
   loadData: =>
     log "Chart[#{@data.name}]#loadData(): query: ", @query()
     new Promise (resolve, reject)=>
-      influxdb.query @query(), (points, err)=>
+      influxdb.query @query(), (points, err) ->
         if err?
           reject(err)
         else
           resolve(points)
 
   transformData: (response) =>
-    log "Chart[#{@data.name}]#transformData(response):", response
+    # log "Chart[#{@data.name}]#transformData(response):", response
     points = response[0].points
     nodes = _.groupBy points, (point) -> point.host
     series = {}
@@ -46,13 +55,13 @@ class @Chart
     nodes = _.groupBy points, (point) -> point.host
     _.each nodes, (points, host) =>
       # console.log "#{host} points: ", points
-      _.each @fieldNames(), (field) =>
+      _.each @fieldNames(), (field) ->
         name = "#{host} - #{field}"
         series[name] ||= {name: name, data: []}
 
     _.each nodes, (points, host) =>
       data = _.each points, (point) =>
-        _.each @fieldNames(), (field) =>
+        _.each @fieldNames(), (field) ->
           name = "#{point.host} - #{field}"
           series[name].data.push [point.time.getTime(), point[field]]
 
@@ -67,14 +76,12 @@ class @Chart
     1
 
   show: =>
-    log "Chart#show()"
-    div = $('<div>').addClass("chart")
-    $("#content").append div
+    # log "Chart#show()"
 
     params = _.clone(@data.chart)
     _.merge params,
       chart:
-        renderTo: div[0]
+        renderTo: @div[0]
         height: 300
       title: text: @data.chart.title
       xAxis: type: 'datetime'
@@ -136,26 +143,25 @@ class @Chart
     else
       "mac =~ /^18FE.*/"
 
-  period: ->
-    if @argv.period
-      @argv.period
+  group: ->
+    if @argv.group
+      @argv.group
     else
-      "12h"
+      "10m"
+
+  period: ->
+    period = if @argv.period? then @argv.period else "2h"
+    result = "time > NOW() - #{period}"
+
+    if @argv.from? and @argv.to?
+      result = "time > '#{@argv.from}' AND time < '#{@argv.to}'"
+    result
 
   query: =>
     fields = @queryFields().join ', '
-    "SELECT host, #{fields} FROM srach GROUP BY host, time(10m) fill(0) WHERE #{@macCondition()} AND time > NOW() - #{@period()};"
-
-
-testSeq = ->
-  delay = (ms)->
-    new Promise (resolve, reject) ->
-      setTimeout((-> resolve()), ms)
-
-  delay( 500).then -> log "delay  500"
-  delay(1000).then -> log "delay 1000"
-  delay(1500).then -> log "delay 1500"
-  delay(2000).then -> log "delay 2000"
+    "SELECT host, #{fields} FROM srach " +
+    "  GROUP BY host, time(#{@group()}) fill(0) " +
+    "  WHERE #{@macCondition()} AND (#{@period()});"
 
 
 # Once DOM (document) is finished loading
@@ -174,7 +180,7 @@ $(document).ready ->
 
     Highcharts.setOptions global: useUTC: false
 
-    # Filter and sort graphs by graphs location params
+    # Filter and sort graphs by "graphs=g1,g2" location params
     if graph_list = parseArgs().graphs
       graph_list = graph_list.split(",")
       filtered_graphs = []
@@ -186,7 +192,7 @@ $(document).ready ->
     # Sequental via promises
     chain = Promise.resolve()
     window.graphs.forEach (graph_data)->
-      chain = chain.then( =>
+      chain = chain.then( ->
         data = _.cloneDeep(defaults)
         _.merge data, graph_data
         chart = new Chart data
@@ -211,3 +217,14 @@ $(document).ready ->
 #      chart = new Chart(data, cb)
 #      window.charts.push chart
 #      chart.loadAndShow()
+
+testSeq = ->
+  delay = (ms)->
+    new Promise (resolve, reject) ->
+      setTimeout((-> resolve()), ms)
+
+  delay( 500).then -> log "delay  500"
+  delay(1000).then -> log "delay 1000"
+  delay(1500).then -> log "delay 1500"
+  delay(2000).then -> log "delay 2000"
+
