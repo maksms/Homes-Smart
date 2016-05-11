@@ -220,12 +220,12 @@ this.Chart = (function() {
   };
 
   Chart.prototype.period = function() {
-    var period, result;
-    period = this.argv.period != null ? this.argv.period : "2h";
-    result = "time > NOW() - " + period;
-    if ((this.argv.from != null) && (this.argv.to != null)) {
-      result = "time > '" + this.argv.from + "' AND time < '" + this.argv.to + "'";
+    var period, result, start;
+    period = "3h";
+    if (this.argv.period != null) {
+      period = this.argv.period;
     }
+    result = this.argv.start != null ? (start = this.argv.start, "time > '" + start + "' AND time < '" + start + "' + " + period) : "time > NOW() - " + period;
     return result;
   };
 

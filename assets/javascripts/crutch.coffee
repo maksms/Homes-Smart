@@ -151,11 +151,14 @@ class @Chart
       "10m"
 
   period: ->
-    period = if @argv.period? then @argv.period else "2h"
-    result = "time > NOW() - #{period}"
+    period = "3h" # default
+    period = @argv.period if @argv.period?
 
-    if @argv.from? and @argv.to?
-      result = "time > '#{@argv.from}' AND time < '#{@argv.to}'"
+    result =  if @argv.start?
+                start = @argv.start
+                "time > '#{start}' AND time < '#{start}' + #{period}"
+              else
+                "time > NOW() - #{period}"
     result
 
   query: =>
