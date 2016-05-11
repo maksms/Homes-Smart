@@ -124,6 +124,7 @@ this.Chart = (function() {
 
   Chart.prototype.show = function() {
     var params;
+    this.div.empty();
     params = _.clone(this.data.chart);
     _.merge(params, {
       chart: {

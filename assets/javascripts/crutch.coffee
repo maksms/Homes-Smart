@@ -51,10 +51,10 @@ class @Chart
     nodes = _.groupBy points, (point) -> point.host
     series = {}
 
-    #log "nodes:", nodes
+    # log "nodes:", nodes
     nodes = _.groupBy points, (point) -> point.host
     _.each nodes, (points, host) =>
-      # console.log "#{host} points: ", points
+      # log "#{host} points: ", points
       _.each @fieldNames(), (field) ->
         name = "#{host} - #{field}"
         series[name] ||= {name: name, data: []}
@@ -77,6 +77,7 @@ class @Chart
 
   show: =>
     # log "Chart#show()"
+    @div.empty()
 
     params = _.clone(@data.chart)
     _.merge params,
