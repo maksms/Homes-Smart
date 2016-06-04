@@ -261,8 +261,7 @@
         yAxis: {
           title: {
              text: 'Lux'
-          },
-          min: 0
+          }
         },
         tooltip: {
           crosshairs: true,
@@ -282,8 +281,7 @@
         yAxis: {
           title: {
              text: 'points'
-          },
-          min: 0
+          }
         },
         tooltip: {
           crosshairs: true,
