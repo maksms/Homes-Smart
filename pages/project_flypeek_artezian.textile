@@ -1,0 +1,9 @@
+
+h3. Тестирование системы FlyPeek
+
+---
+
+p=. <img src="/workflow/img/00E0F80097B3.jpg" oncontextmenu="return false;" width="100%">
+
+p=. Вид на раскопки Артезианской археологической Экспедиции
+
