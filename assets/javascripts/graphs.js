@@ -483,14 +483,13 @@
 
 
     {
-      name: 'acpwh',
+      name: 'pmwh',
       chart: {
         title: 'AC Power/Hours',
         yAxis: {
           title: {
              text: 'Wt/h'
-          },
-          min: 0
+          }
         },
         tooltip: {
           crosshairs: true,
@@ -499,6 +498,27 @@
       },
       select: {
         fields: ["pmwh"]
+      }
+    },
+
+
+    {
+      name: 'co2',
+      chart: {
+        title: 'CO2 control',
+        yAxis: {
+          title: {
+             text: 'ppm'
+          },
+          min: 0
+        },
+        tooltip: {
+          crosshairs: true,
+          valueSuffix: ' ppm'
+        }
+      },
+      select: {
+        fields: ["co2"]
       }
     },
 
