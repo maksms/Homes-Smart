@@ -509,8 +509,7 @@
         yAxis: {
           title: {
              text: 'ppm'
-          },
-          min: 0
+          }
         },
         tooltip: {
           crosshairs: true,
