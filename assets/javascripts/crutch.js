@@ -221,7 +221,7 @@ this.Chart = (function() {
 
   Chart.prototype.period = function() {
     var period, result, start;
-    period = "3h";
+    period = "15m";
     if (this.argv.period != null) {
       period = this.argv.period;
     }
