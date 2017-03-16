@@ -483,7 +483,7 @@
 
 
     {
-      name: 'acpmwh',
+      name: 'acpwh',
       chart: {
         title: 'AC Power/Hours',
         yAxis: {
